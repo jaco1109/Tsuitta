@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3361C00429B00C9B7CE /* AppDelegate.swift */; };
+		259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33A1C00429B00C9B7CE /* Main.storyboard */; };
+		259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33D1C00429B00C9B7CE /* Assets.xcassets */; };
+		259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33F1C00429B00C9B7CE /* LaunchScreen.storyboard */; };
+		259DD34C1C00429B00C9B7CE /* TsuittaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD34B1C00429B00C9B7CE /* TsuittaTests.swift */; };
+		259DD3571C00429B00C9B7CE /* TsuittaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */; };
+		259DD3911C004E1100C9B7CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3901C004E1100C9B7CE /* ViewController.swift */; };
+		259DD39C1C00611A00C9B7CE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; };
+		259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; };
+		259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		259DD3481C00429B00C9B7CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 259DD32B1C00429A00C9B7CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 259DD3321C00429A00C9B7CE;
+			remoteInfo = Tsuitta;
+		};
+		259DD3531C00429B00C9B7CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 259DD32B1C00429A00C9B7CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 259DD3321C00429A00C9B7CE;
+			remoteInfo = Tsuitta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		259DD3A01C00611A00C9B7CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */,
+				259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		259DD3331C00429A00C9B7CE /* Tsuitta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tsuitta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		259DD3361C00429B00C9B7CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		259DD33B1C00429B00C9B7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		259DD33D1C00429B00C9B7CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		259DD3401C00429B00C9B7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		259DD3421C00429B00C9B7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259DD3471C00429B00C9B7CE /* TsuittaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TsuittaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		259DD34B1C00429B00C9B7CE /* TsuittaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsuittaTests.swift; sourceTree = "<group>"; };
+		259DD34D1C00429B00C9B7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259DD3521C00429B00C9B7CE /* TsuittaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TsuittaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsuittaUITests.swift; sourceTree = "<group>"; };
+		259DD3581C00429B00C9B7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259DD3901C004E1100C9B7CE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		259DD3931C005D0E00C9B7CE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		259DD3301C00429A00C9B7CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259DD39C1C00611A00C9B7CE /* SwiftyJSON.framework in Frameworks */,
+				259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259DD3441C00429B00C9B7CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259DD34F1C00429B00C9B7CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		259DD32A1C00429A00C9B7CE = {
+			isa = PBXGroup;
+			children = (
+				259DD3921C00530C00C9B7CE /* Framework */,
+				259DD3351C00429A00C9B7CE /* Tsuitta */,
+				259DD34A1C00429B00C9B7CE /* TsuittaTests */,
+				259DD3551C00429B00C9B7CE /* TsuittaUITests */,
+				259DD3341C00429A00C9B7CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		259DD3341C00429A00C9B7CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3331C00429A00C9B7CE /* Tsuitta.app */,
+				259DD3471C00429B00C9B7CE /* TsuittaTests.xctest */,
+				259DD3521C00429B00C9B7CE /* TsuittaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		259DD3351C00429A00C9B7CE /* Tsuitta */ = {
+			isa = PBXGroup;
+			children = (
+				259DD36F1C004D4300C9B7CE /* Constant */,
+				259DD3701C004D4300C9B7CE /* Controller */,
+				259DD3711C004D4300C9B7CE /* Image */,
+				259DD37D1C004D4300C9B7CE /* Model */,
+				259DD3801C004D4300C9B7CE /* View */,
+				259DD3361C00429B00C9B7CE /* AppDelegate.swift */,
+				259DD33A1C00429B00C9B7CE /* Main.storyboard */,
+				259DD33D1C00429B00C9B7CE /* Assets.xcassets */,
+				259DD33F1C00429B00C9B7CE /* LaunchScreen.storyboard */,
+				259DD3421C00429B00C9B7CE /* Info.plist */,
+			);
+			path = Tsuitta;
+			sourceTree = "<group>";
+		};
+		259DD34A1C00429B00C9B7CE /* TsuittaTests */ = {
+			isa = PBXGroup;
+			children = (
+				259DD34B1C00429B00C9B7CE /* TsuittaTests.swift */,
+				259DD34D1C00429B00C9B7CE /* Info.plist */,
+			);
+			path = TsuittaTests;
+			sourceTree = "<group>";
+		};
+		259DD3551C00429B00C9B7CE /* TsuittaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */,
+				259DD3581C00429B00C9B7CE /* Info.plist */,
+			);
+			path = TsuittaUITests;
+			sourceTree = "<group>";
+		};
+		259DD36F1C004D4300C9B7CE /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		259DD3701C004D4300C9B7CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3901C004E1100C9B7CE /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		259DD3711C004D4300C9B7CE /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3721C004D4300C9B7CE /* Common */,
+				259DD3731C004D4300C9B7CE /* Config */,
+				259DD3741C004D4300C9B7CE /* Search */,
+				259DD3751C004D4300C9B7CE /* SearchResult */,
+				259DD3761C004D4300C9B7CE /* TL */,
+				259DD37B1C004D4300C9B7CE /* Tweet */,
+				259DD37C1C004D4300C9B7CE /* User */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		259DD3721C004D4300C9B7CE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		259DD3731C004D4300C9B7CE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		259DD3741C004D4300C9B7CE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		259DD3751C004D4300C9B7CE /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		259DD3761C004D4300C9B7CE /* TL */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3771C004D4300C9B7CE /* DM */,
+				259DD3781C004D4300C9B7CE /* Reply */,
+				259DD3791C004D4300C9B7CE /* Tweet */,
+				259DD37A1C004D4300C9B7CE /* User */,
+			);
+			path = TL;
+			sourceTree = "<group>";
+		};
+		259DD3771C004D4300C9B7CE /* DM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DM;
+			sourceTree = "<group>";
+		};
+		259DD3781C004D4300C9B7CE /* Reply */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reply;
+			sourceTree = "<group>";
+		};
+		259DD3791C004D4300C9B7CE /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tweet;
+			sourceTree = "<group>";
+		};
+		259DD37A1C004D4300C9B7CE /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		259DD37B1C004D4300C9B7CE /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tweet;
+			sourceTree = "<group>";
+		};
+		259DD37C1C004D4300C9B7CE /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		259DD37D1C004D4300C9B7CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				259DD37E1C004D4300C9B7CE /* API */,
+				259DD37F1C004D4300C9B7CE /* UserData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		259DD37E1C004D4300C9B7CE /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		259DD37F1C004D4300C9B7CE /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
+		259DD3801C004D4300C9B7CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3811C004D4300C9B7CE /* Common */,
+				259DD3821C004D4300C9B7CE /* Config */,
+				259DD3831C004D4300C9B7CE /* Search */,
+				259DD3841C004D4300C9B7CE /* SearchResult */,
+				259DD3851C004D4300C9B7CE /* TL */,
+				259DD38A1C004D4300C9B7CE /* Tweet */,
+				259DD38B1C004D4300C9B7CE /* User */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		259DD3811C004D4300C9B7CE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		259DD3821C004D4300C9B7CE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		259DD3831C004D4300C9B7CE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		259DD3841C004D4300C9B7CE /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		259DD3851C004D4300C9B7CE /* TL */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3861C004D4300C9B7CE /* DM */,
+				259DD3871C004D4300C9B7CE /* Reply */,
+				259DD3881C004D4300C9B7CE /* Tweet */,
+				259DD3891C004D4300C9B7CE /* User */,
+			);
+			path = TL;
+			sourceTree = "<group>";
+		};
+		259DD3861C004D4300C9B7CE /* DM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DM;
+			sourceTree = "<group>";
+		};
+		259DD3871C004D4300C9B7CE /* Reply */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reply;
+			sourceTree = "<group>";
+		};
+		259DD3881C004D4300C9B7CE /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tweet;
+			sourceTree = "<group>";
+		};
+		259DD3891C004D4300C9B7CE /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		259DD38A1C004D4300C9B7CE /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tweet;
+			sourceTree = "<group>";
+		};
+		259DD38B1C004D4300C9B7CE /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		259DD3921C00530C00C9B7CE /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */,
+				259DD3931C005D0E00C9B7CE /* Alamofire.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		259DD3321C00429A00C9B7CE /* Tsuitta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 259DD35B1C00429B00C9B7CE /* Build configuration list for PBXNativeTarget "Tsuitta" */;
+			buildPhases = (
+				259DD32F1C00429A00C9B7CE /* Sources */,
+				259DD3301C00429A00C9B7CE /* Frameworks */,
+				259DD3311C00429A00C9B7CE /* Resources */,
+				259DD3A01C00611A00C9B7CE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tsuitta;
+			productName = Tsuitta;
+			productReference = 259DD3331C00429A00C9B7CE /* Tsuitta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		259DD3461C00429B00C9B7CE /* TsuittaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 259DD35E1C00429B00C9B7CE /* Build configuration list for PBXNativeTarget "TsuittaTests" */;
+			buildPhases = (
+				259DD3431C00429B00C9B7CE /* Sources */,
+				259DD3441C00429B00C9B7CE /* Frameworks */,
+				259DD3451C00429B00C9B7CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				259DD3491C00429B00C9B7CE /* PBXTargetDependency */,
+			);
+			name = TsuittaTests;
+			productName = TsuittaTests;
+			productReference = 259DD3471C00429B00C9B7CE /* TsuittaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		259DD3511C00429B00C9B7CE /* TsuittaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 259DD3611C00429B00C9B7CE /* Build configuration list for PBXNativeTarget "TsuittaUITests" */;
+			buildPhases = (
+				259DD34E1C00429B00C9B7CE /* Sources */,
+				259DD34F1C00429B00C9B7CE /* Frameworks */,
+				259DD3501C00429B00C9B7CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				259DD3541C00429B00C9B7CE /* PBXTargetDependency */,
+			);
+			name = TsuittaUITests;
+			productName = TsuittaUITests;
+			productReference = 259DD3521C00429B00C9B7CE /* TsuittaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		259DD32B1C00429A00C9B7CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "土門良輔";
+				TargetAttributes = {
+					259DD3321C00429A00C9B7CE = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 2E23UATA6S;
+					};
+					259DD3461C00429B00C9B7CE = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 259DD3321C00429A00C9B7CE;
+					};
+					259DD3511C00429B00C9B7CE = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 259DD3321C00429A00C9B7CE;
+					};
+				};
+			};
+			buildConfigurationList = 259DD32E1C00429A00C9B7CE /* Build configuration list for PBXProject "Tsuitta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 259DD32A1C00429A00C9B7CE;
+			productRefGroup = 259DD3341C00429A00C9B7CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				259DD3321C00429A00C9B7CE /* Tsuitta */,
+				259DD3461C00429B00C9B7CE /* TsuittaTests */,
+				259DD3511C00429B00C9B7CE /* TsuittaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		259DD3311C00429A00C9B7CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
+				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
+				259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259DD3451C00429B00C9B7CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259DD3501C00429B00C9B7CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		259DD32F1C00429A00C9B7CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259DD3911C004E1100C9B7CE /* ViewController.swift in Sources */,
+				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259DD3431C00429B00C9B7CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259DD34C1C00429B00C9B7CE /* TsuittaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259DD34E1C00429B00C9B7CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259DD3571C00429B00C9B7CE /* TsuittaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		259DD3491C00429B00C9B7CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 259DD3321C00429A00C9B7CE /* Tsuitta */;
+			targetProxy = 259DD3481C00429B00C9B7CE /* PBXContainerItemProxy */;
+		};
+		259DD3541C00429B00C9B7CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 259DD3321C00429A00C9B7CE /* Tsuitta */;
+			targetProxy = 259DD3531C00429B00C9B7CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		259DD33A1C00429B00C9B7CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				259DD33B1C00429B00C9B7CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		259DD33F1C00429B00C9B7CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				259DD3401C00429B00C9B7CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		259DD3591C00429B00C9B7CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		259DD35A1C00429B00C9B7CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		259DD35C1C00429B00C9B7CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Tsuitta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Tsuitta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		259DD35D1C00429B00C9B7CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Tsuitta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Tsuitta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		259DD35F1C00429B00C9B7CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TsuittaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.TsuittaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tsuitta.app/Tsuitta";
+			};
+			name = Debug;
+		};
+		259DD3601C00429B00C9B7CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TsuittaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.TsuittaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tsuitta.app/Tsuitta";
+			};
+			name = Release;
+		};
+		259DD3621C00429B00C9B7CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TsuittaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.TsuittaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tsuitta;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		259DD3631C00429B00C9B7CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TsuittaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.TsuittaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tsuitta;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		259DD32E1C00429A00C9B7CE /* Build configuration list for PBXProject "Tsuitta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259DD3591C00429B00C9B7CE /* Debug */,
+				259DD35A1C00429B00C9B7CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		259DD35B1C00429B00C9B7CE /* Build configuration list for PBXNativeTarget "Tsuitta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259DD35C1C00429B00C9B7CE /* Debug */,
+				259DD35D1C00429B00C9B7CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		259DD35E1C00429B00C9B7CE /* Build configuration list for PBXNativeTarget "TsuittaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259DD35F1C00429B00C9B7CE /* Debug */,
+				259DD3601C00429B00C9B7CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		259DD3611C00429B00C9B7CE /* Build configuration list for PBXNativeTarget "TsuittaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259DD3621C00429B00C9B7CE /* Debug */,
+				259DD3631C00429B00C9B7CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 259DD32B1C00429A00C9B7CE /* Project object */;
+}
