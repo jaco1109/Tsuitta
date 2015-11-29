@@ -13,7 +13,7 @@
 		259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33F1C00429B00C9B7CE /* LaunchScreen.storyboard */; };
 		259DD34C1C00429B00C9B7CE /* TsuittaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD34B1C00429B00C9B7CE /* TsuittaTests.swift */; };
 		259DD3571C00429B00C9B7CE /* TsuittaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */; };
-		259DD3911C004E1100C9B7CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3901C004E1100C9B7CE /* ViewController.swift */; };
+		259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3901C004E1100C9B7CE /* LoginViewController.swift */; };
 		259DD39C1C00611A00C9B7CE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; };
 		259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; };
@@ -65,7 +65,7 @@
 		259DD3521C00429B00C9B7CE /* TsuittaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TsuittaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsuittaUITests.swift; sourceTree = "<group>"; };
 		259DD3581C00429B00C9B7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		259DD3901C004E1100C9B7CE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		259DD3901C004E1100C9B7CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		259DD3931C005D0E00C9B7CE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,7 +163,7 @@
 		259DD3701C004D4300C9B7CE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				259DD3901C004E1100C9B7CE /* ViewController.swift */,
+				259DD3901C004E1100C9B7CE /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -523,7 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				259DD3911C004E1100C9B7CE /* ViewController.swift in Sources */,
+				259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */,
 				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,6 +763,7 @@
 				259DD35D1C00429B00C9B7CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		259DD35E1C00429B00C9B7CE /* Build configuration list for PBXNativeTarget "TsuittaTests" */ = {
 			isa = XCConfigurationList;
@@ -771,6 +772,7 @@
 				259DD3601C00429B00C9B7CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		259DD3611C00429B00C9B7CE /* Build configuration list for PBXNativeTarget "TsuittaUITests" */ = {
 			isa = XCConfigurationList;
@@ -779,6 +781,7 @@
 				259DD3631C00429B00C9B7CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
