@@ -11,6 +11,7 @@
 		2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
 		2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */; };
 		2575594F1C12C2D30031B6CF /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
+		257559511C12C39D0031B6CF /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257559501C12C39D0031B6CF /* TimeLineViewController.swift */; };
 		259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3361C00429B00C9B7CE /* AppDelegate.swift */; };
 		259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33A1C00429B00C9B7CE /* Main.storyboard */; };
 		259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33D1C00429B00C9B7CE /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		257559491C12C2D30031B6CF /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		2575594B1C12C2D30031B6CF /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		257559501C12C39D0031B6CF /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		259DD3331C00429A00C9B7CE /* Tsuitta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tsuitta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259DD3361C00429B00C9B7CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259DD33B1C00429B00C9B7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				259DD3901C004E1100C9B7CE /* LoginViewController.swift */,
+				257559501C12C39D0031B6CF /* TimeLineViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
