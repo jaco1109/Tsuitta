@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559481C12C2D30031B6CF /* Fabric.framework */; };
+		2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
+		2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */; };
+		2575594F1C12C2D30031B6CF /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
 		259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3361C00429B00C9B7CE /* AppDelegate.swift */; };
 		259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33A1C00429B00C9B7CE /* Main.storyboard */; };
 		259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33D1C00429B00C9B7CE /* Assets.xcassets */; };
@@ -53,6 +57,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		257559481C12C2D30031B6CF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		257559491C12C2D30031B6CF /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		2575594B1C12C2D30031B6CF /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		259DD3331C00429A00C9B7CE /* Tsuitta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tsuitta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259DD3361C00429B00C9B7CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259DD33B1C00429B00C9B7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,8 +83,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2575594F1C12C2D30031B6CF /* TwitterCore.framework in Frameworks */,
 				259DD39C1C00611A00C9B7CE /* SwiftyJSON.framework in Frameworks */,
 				259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */,
+				2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */,
+				2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +395,10 @@
 		259DD3921C00530C00C9B7CE /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				257559481C12C2D30031B6CF /* Fabric.framework */,
+				257559491C12C2D30031B6CF /* TwitterKit.framework */,
+				2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */,
+				2575594B1C12C2D30031B6CF /* TwitterCore.framework */,
 				259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */,
 				259DD3931C005D0E00C9B7CE /* Alamofire.framework */,
 			);
@@ -401,6 +416,7 @@
 				259DD3301C00429A00C9B7CE /* Frameworks */,
 				259DD3311C00429A00C9B7CE /* Resources */,
 				259DD3A01C00611A00C9B7CE /* Embed Frameworks */,
+				257559461C12C2390031B6CF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -496,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */,
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
 				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
 				259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */,
@@ -518,6 +535,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		257559461C12C2390031B6CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 4df3a030d3e0d055e0cd174f7dfb59388e655d83 22e6197f5ca20038b4859daba5dd380586d35852729f5ec15c606197e4172dc3";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		259DD32F1C00429A00C9B7CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -525,6 +558,7 @@
 			files = (
 				259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */,
 				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
+				257559511C12C39D0031B6CF /* TimeLineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +703,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Tsuitta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -687,6 +722,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Tsuitta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
