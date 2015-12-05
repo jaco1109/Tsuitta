@@ -7,19 +7,32 @@
 //
 
 import UIKit
+import TwitterKit
 
 class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let loginButton = TWTRLogInButton(logInCompletion: {
+            session, error in
+            if let s = session {
+                print(s.userName)
+                // ログイン成功したらクソ遷移する
+                let timelineVC = TimeLineViewController()
+                UIApplication.sharedApplication().keyWindow?.rootViewController = timelineVC
+            } else {
+                print(error!.localizedDescription)
+            }
+        })
+        loginButton.center = self.view.center
+        self.view.addSubview(loginButton)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
