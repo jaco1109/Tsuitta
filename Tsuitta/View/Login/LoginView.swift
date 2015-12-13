@@ -24,11 +24,11 @@ class LoginView : UIView {
     
     weak var delegate: LoginViewDelegate?
     
-    @IBAction func didTapTsuittaLoginButton(sender: UIButton) {
+    @IBAction private func didTapTsuittaLoginButton(sender: UIButton) {
         delegate?.didTapTsuittaLoginButton()
     }
     
-    @IBAction func didTapLogoutButton(sender: UIButton) {
+    @IBAction private func didTapLogoutButton(sender: UIButton) {
         delegate?.didTapLogoutButton()
     }
 }
