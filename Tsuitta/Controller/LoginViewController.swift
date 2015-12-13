@@ -8,6 +8,7 @@
 
 import UIKit
 import TwitterKit
+import PagingMenuController
 
 class LoginViewController: UIViewController, LoginViewDelegate {
     
@@ -18,6 +19,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
             self.view = view
             view.delegate = self
         }
+
     }
     
     override func viewDidLoad() {
@@ -39,7 +41,9 @@ class LoginViewController: UIViewController, LoginViewDelegate {
                 print("signed in as \(s.userName)");
                 s.userID
                 self.printAllLoginUserID()
-                self.navigationController?.pushViewController(TimeLineViewController(), animated: true)
+                
+                let page: PagingController = PagingController()
+                self.navigationController?.pushViewController(page, animated: true)
             } else {
                 print("error: \(error?.localizedDescription)")
             }

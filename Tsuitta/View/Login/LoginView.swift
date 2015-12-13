@@ -20,7 +20,7 @@ protocol LoginViewDelegate : class{
     func didTapLogoutButton()
 }
 
-class LoginView : UIView {
+class LoginView: UIView {
     
     weak var delegate: LoginViewDelegate?
     
@@ -31,4 +31,5 @@ class LoginView : UIView {
     @IBAction private func didTapLogoutButton(sender: UIButton) {
         delegate?.didTapLogoutButton()
     }
+
 }
