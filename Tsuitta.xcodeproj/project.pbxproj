@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0652FC661C1D4F69005006D3 /* PagingMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC651C1D4F69005006D3 /* PagingMenu.storyboard */; };
+		0652FC681C1D5133005006D3 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; };
+		0652FC691C1D5133005006D3 /* PagingMenuController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC6C1C1D5692005006D3 /* HomeViewController.swift */; };
+		0652FC711C1D5856005006D3 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC701C1D5856005006D3 /* HomeView.xib */; };
+		0652FC731C1D587B005006D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* HomeView.swift */; };
+		253D5E871C148E6600D59DC0 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 253D5E861C148E6600D59DC0 /* icon.jpg */; };
 		2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559481C12C2D30031B6CF /* Fabric.framework */; };
 		2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
 		2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */; };
 		2575594F1C12C2D30031B6CF /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
-		257559511C12C39D0031B6CF /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257559501C12C39D0031B6CF /* TimeLineViewController.swift */; };
+		257559511C12C39D0031B6CF /* PagingMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257559501C12C39D0031B6CF /* PagingMenuController.swift */; };
+		257559541C12E3160031B6CF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257559531C12E3160031B6CF /* LoginView.swift */; };
+		257559561C12E3250031B6CF /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257559551C12E3250031B6CF /* LoginView.xib */; };
 		259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3361C00429B00C9B7CE /* AppDelegate.swift */; };
 		259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33A1C00429B00C9B7CE /* Main.storyboard */; };
 		259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33D1C00429B00C9B7CE /* Assets.xcassets */; };
@@ -50,6 +59,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */,
+				0652FC691C1D5133005006D3 /* PagingMenuController.framework in Embed Frameworks */,
 				259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -58,11 +68,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0652FC651C1D4F69005006D3 /* PagingMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PagingMenu.storyboard; sourceTree = "<group>"; };
+		0652FC671C1D5133005006D3 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
+		0652FC6C1C1D5692005006D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0652FC701C1D5856005006D3 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeView.xib; path = User/HomeView.xib; sourceTree = SOURCE_ROOT; };
+		0652FC721C1D587B005006D3 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = User/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		253D5E861C148E6600D59DC0 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 		257559481C12C2D30031B6CF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		257559491C12C2D30031B6CF /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		2575594B1C12C2D30031B6CF /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
-		257559501C12C39D0031B6CF /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		257559501C12C39D0031B6CF /* PagingMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingMenuController.swift; sourceTree = "<group>"; };
+		257559531C12E3160031B6CF /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		257559551C12E3250031B6CF /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		259DD3331C00429A00C9B7CE /* Tsuitta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tsuitta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259DD3361C00429B00C9B7CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259DD33B1C00429B00C9B7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2575594F1C12C2D30031B6CF /* TwitterCore.framework in Frameworks */,
+				0652FC681C1D5133005006D3 /* PagingMenuController.framework in Frameworks */,
 				259DD39C1C00611A00C9B7CE /* SwiftyJSON.framework in Frameworks */,
 				259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */,
 				2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */,
@@ -110,9 +129,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		253D5E851C148E5600D59DC0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				253D5E861C148E6600D59DC0 /* icon.jpg */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		257559521C12E30B0031B6CF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				257559531C12E3160031B6CF /* LoginView.swift */,
+				257559551C12E3250031B6CF /* LoginView.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		259DD32A1C00429A00C9B7CE = {
 			isa = PBXGroup;
 			children = (
+				0652FC671C1D5133005006D3 /* PagingMenuController.framework */,
 				259DD3921C00530C00C9B7CE /* Framework */,
 				259DD3351C00429A00C9B7CE /* Tsuitta */,
 				259DD34A1C00429B00C9B7CE /* TsuittaTests */,
@@ -141,6 +178,7 @@
 				259DD3801C004D4300C9B7CE /* View */,
 				259DD3361C00429B00C9B7CE /* AppDelegate.swift */,
 				259DD33A1C00429B00C9B7CE /* Main.storyboard */,
+				0652FC651C1D4F69005006D3 /* PagingMenu.storyboard */,
 				259DD33D1C00429B00C9B7CE /* Assets.xcassets */,
 				259DD33F1C00429B00C9B7CE /* LaunchScreen.storyboard */,
 				259DD3421C00429B00C9B7CE /* Info.plist */,
@@ -177,7 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				259DD3901C004E1100C9B7CE /* LoginViewController.swift */,
-				257559501C12C39D0031B6CF /* TimeLineViewController.swift */,
+				257559501C12C39D0031B6CF /* PagingMenuController.swift */,
+				0652FC6C1C1D5692005006D3 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +224,7 @@
 		259DD3711C004D4300C9B7CE /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				253D5E851C148E5600D59DC0 /* Login */,
 				259DD3721C004D4300C9B7CE /* Common */,
 				259DD3731C004D4300C9B7CE /* Config */,
 				259DD3741C004D4300C9B7CE /* Search */,
@@ -303,6 +343,7 @@
 		259DD3801C004D4300C9B7CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				257559521C12E30B0031B6CF /* Login */,
 				259DD3811C004D4300C9B7CE /* Common */,
 				259DD3821C004D4300C9B7CE /* Config */,
 				259DD3831C004D4300C9B7CE /* Search */,
@@ -377,6 +418,8 @@
 		259DD3891C004D4300C9B7CE /* User */ = {
 			isa = PBXGroup;
 			children = (
+				0652FC701C1D5856005006D3 /* HomeView.xib */,
+				0652FC721C1D587B005006D3 /* HomeView.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -516,9 +559,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */,
+				0652FC711C1D5856005006D3 /* HomeView.xib in Resources */,
+				0652FC661C1D4F69005006D3 /* PagingMenu.storyboard in Resources */,
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
 				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
 				259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */,
+				253D5E871C148E6600D59DC0 /* icon.jpg in Resources */,
+				257559561C12E3250031B6CF /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,9 +606,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */,
 				259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */,
 				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
-				257559511C12C39D0031B6CF /* TimeLineViewController.swift in Sources */,
+				0652FC731C1D587B005006D3 /* HomeView.swift in Sources */,
+				257559541C12E3160031B6CF /* LoginView.swift in Sources */,
+				257559511C12C39D0031B6CF /* PagingMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

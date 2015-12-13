@@ -8,24 +8,24 @@
 
 import UIKit
 import TwitterKit
+import PagingMenuController
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginViewDelegate {
+    
+    override func loadView() {
+        super.loadView()
+        
+        if let view = UINib(nibName: "LoginView", bundle: nil).instantiateWithOwner(self, options: nil).first as? LoginView {
+            self.view = view
+            view.delegate = self
+        }
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let loginButton = TWTRLogInButton(logInCompletion: {
-            session, error in
-            if let s = session {
-                print(s.userName)
-                // ログイン成功したらクソ遷移する
-                let timelineVC = TimeLineViewController()
-                UIApplication.sharedApplication().keyWindow?.rootViewController = timelineVC
-            } else {
-                print(error!.localizedDescription)
-            }
-        })
-        loginButton.center = self.view.center
-        self.view.addSubview(loginButton)
+        
+        self.navigationController?.navigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,6 +33,66 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: LoginViewDelegate
     
+    func didTapTsuittaLoginButton() {
+        Twitter.sharedInstance().logInWithCompletion { session, error in
+            if let s = session {
+                print("signed in as \(s.userName)");
+                s.userID
+                self.printAllLoginUserID()
+                let page = PagingMenuController(viewControllers: [TimeLineViewController()])
+                self.navigationController?.pushViewController(page, animated: true)
+            } else {
+                print("error: \(error?.localizedDescription)")
+            }
+        }
+    }
+    
+    func didTapLogoutButton() {
+        let store = Twitter.sharedInstance().sessionStore
+        let sessions = store.existingUserSessions()
+        
+        if sessions.isEmpty {
+            return
+        }
+        
+        if sessions.count == 1 {
+            return logout(sessions.first!.userID)
+        }
+        
+        let alert = UIAlertController(title: "ログアウトするアカウントを選択してください", message: nil, preferredStyle: .ActionSheet)
+        for session in sessions {
+            alert.addAction(UIAlertAction(title: session.userName, style: .Default, handler: { (_) -> Void in
+                self.logout(session.userID)
+            }))
+        }
+        alert.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    /**
+     引数のIDのアカウントをログアウトします。
+     
+     - parameter userID: ログアウトするUserID
+     */
+    private func logout(userID: String){
+        let store = Twitter.sharedInstance().sessionStore
+        store.logOutUserID(userID)
+        printAllLoginUserID()
+    }
+    
+    /**
+     ログイン中のuserIDをすべてprintします。
+     */
+    private func printAllLoginUserID(){
+        let loginSessions = Twitter.sharedInstance().sessionStore.existingUserSessions()
+        print("signed in all userIDs:")
+        loginSessions.forEach { (session) -> () in
+            print(session.userID)
+        }
+        print("---------")
+    }
 }
 
