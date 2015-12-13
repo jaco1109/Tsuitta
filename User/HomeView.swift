@@ -6,4 +6,10 @@
 //  Copyright © 2015年 土門良輔. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class HomeView: UIView {
+    
+    
+    
+}
