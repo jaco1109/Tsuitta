@@ -162,4 +162,28 @@ class GetAPIManager {
             }
         }
     }
+    
+    //MARK: DM
+    //fabricだとDMつかえないっぽい＞＜
+//    func DM(DMID: String, callback: ()->Void){
+//        api.get("/direct_messages/show.json", parameter: ["id": "1"]) { (response, data, error) -> Void in
+//            if let err = error {
+//                print("エラーだよ：\(err.code)")
+//                return
+//            }
+//            var json: AnyObject?
+//            do {
+//                json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)
+//            } catch {
+//                return
+//            }
+//            //if let jsonData = json as? AnyObject {
+//                debug(json)
+//            //}
+//        }
+//    }
+//    
+//    func allDM(){
+//        
+//    }
 }
