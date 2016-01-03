@@ -8,6 +8,7 @@
 
 import UIKit
 import TwitterKit
+import PagingMenuController
 
 class LoginViewController: UIViewController, LoginViewDelegate {
     
@@ -18,6 +19,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
             self.view = view
             view.delegate = self
         }
+
     }
     
     override func viewDidLoad() {
@@ -36,7 +38,8 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     func didTapTsuittaLoginButton() {
         GetAPIManager.sharedInstance.login { (session, error) -> Void in
             if let _ = session {
-                self.navigationController?.pushViewController(TimeLineViewController(), animated: true)
+                let page: PagingController = PagingController()
+                self.navigationController?.pushViewController(page, animated: true)
             } else {
                 debug("error: \(error?.localizedDescription)")
             }
