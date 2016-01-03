@@ -186,4 +186,52 @@ class GetAPIManager {
 //    func allDM(){
 //        
 //    }
+    
+    //MARK: Search
+    
+    func searchUser(searchWord: String, callback: ([TWTRUser]) -> Void){
+        api.get("/users/search.json", parameter: ["q": searchWord, "count": "25"]) { (response, data, error) -> Void in
+            if let err = error {
+                print("エラーだよ：\(err.code)")
+                return
+            }
+            if let d = data {
+                let json2 = JSON(data: d)
+                let jsonArray = json2.arrayObject
+                let users = TWTRUser.usersWithJSONArray(jsonArray) as! [TWTRUser]
+                callback(users)
+            }
+        }
+    }
+    
+    func searchTweet(searchWord: String, callback: ([TWTRTweet]) -> Void){
+        api.get("/search/tweets.json", parameter: ["q": "#" + searchWord, "count": "25"]) { (response, data, error) -> Void in
+            if let err = error {
+                print("エラーだよ：\(err.code)")
+                return
+            }
+            if let d = data {
+                let json2 = JSON(data: d)
+                let jsonArray = json2["statuses"].arrayObject
+                let tweets = TWTRTweet.tweetsWithJSONArray(jsonArray) as! [TWTRTweet]
+                callback(tweets)
+            }
+        }
+    }
+    
+    func searchImage(searchWord: String, callback: ([TWTRTweet]) -> Void){
+        api.get("/search/tweets.json", parameter: ["q": "#" + searchWord + " filter:images", "count": "25", "include_entities": "true"]) { (response, data, error) -> Void in
+            if let err = error {
+                print("エラーだよ：\(err.code)")
+                return
+            }
+            if let d = data {
+                let json2 = JSON(data: d)
+                let jsonArray = json2["statuses"].arrayObject
+                let tweets = TWTRTweet.tweetsWithJSONArray(jsonArray) as! [TWTRTweet]
+                callback(tweets)
+            }
+        }
+    }
+    
 }
