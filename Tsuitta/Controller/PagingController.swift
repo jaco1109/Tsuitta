@@ -42,12 +42,6 @@ class PagingController: UIViewController, PagingMenuControllerDelegate {
         
     }
     
-    override func loadView() {
-        
-        super.loadView()
-
-    }
-    
     func options() -> PagingMenuOptions {
         
         let screenW = UIScreen.mainScreen().bounds.size.width

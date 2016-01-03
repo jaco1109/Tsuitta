@@ -41,9 +41,12 @@ class LoginViewController: UIViewController, LoginViewDelegate {
                 print("signed in as \(s.userName)");
                 s.userID
                 self.printAllLoginUserID()
-                
+
                 let page: PagingController = PagingController()
-                self.navigationController?.pushViewController(page, animated: true)
+                let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
+                let controller = storyBoard.instantiateInitialViewController()! as UIViewController
+                
+                self.navigationController?.pushViewController(controller, animated: true)
             } else {
                 print("error: \(error?.localizedDescription)")
             }
