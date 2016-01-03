@@ -34,11 +34,8 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     //MARK: LoginViewDelegate
     
     func didTapTsuittaLoginButton() {
-        Twitter.sharedInstance().logInWithCompletion { session, error in
-            if let s = session {
-                print("signed in as \(s.userName)");
-                s.userID
-                self.printAllLoginUserID()
+        GetAPIManager.sharedInstance.login { (session, error) -> Void in
+            if let _ = session {
                 self.navigationController?.pushViewController(TimeLineViewController(), animated: true)
             } else {
                 debug("error: \(error?.localizedDescription)")
@@ -47,26 +44,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     }
     
     func didTapLogoutButton() {
-        let store = Twitter.sharedInstance().sessionStore
-        let sessions = store.existingUserSessions()
-        
-        if sessions.isEmpty {
-            return
-        }
-        
-        if sessions.count == 1 {
-            return logout(sessions.first!.userID)
-        }
-        
-        let alert = UIAlertController(title: "ログアウトするアカウントを選択してください", message: nil, preferredStyle: .ActionSheet)
-        for session in sessions {
-            alert.addAction(UIAlertAction(title: session.userName, style: .Default, handler: { (_) -> Void in
-                self.logout(session.userID)
-            }))
-        }
-        alert.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil))
-        
-        self.presentViewController(alert, animated: true, completion: nil)
+        GetAPIManager.sharedInstance.logout()
     }
     
     /**

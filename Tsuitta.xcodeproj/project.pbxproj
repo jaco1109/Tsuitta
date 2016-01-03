@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		253D5E871C148E6600D59DC0 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 253D5E861C148E6600D59DC0 /* icon.jpg */; };
+		2562F0B81C1D5F1900C36444 /* GetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */; };
 		2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559481C12C2D30031B6CF /* Fabric.framework */; };
 		2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
 		2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */; };
@@ -26,6 +27,7 @@
 		259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; };
 		259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DC1C2527F600C84D58 /* APIClient.swift */; };
 		25D441DF1C26AFA400C84D58 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DE1C26AFA400C84D58 /* debug.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		253D5E861C148E6600D59DC0 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAPIManager.swift; sourceTree = "<group>"; };
 		257559481C12C2D30031B6CF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		257559491C12C2D30031B6CF /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		259DD3901C004E1100C9B7CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		259DD3931C005D0E00C9B7CE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		25D441DC1C2527F600C84D58 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		25D441DE1C26AFA400C84D58 /* debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,6 +320,8 @@
 		259DD37E1C004D4300C9B7CE /* API */ = {
 			isa = PBXGroup;
 			children = (
+				2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */,
+				25D441DC1C2527F600C84D58 /* APIClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -592,8 +598,10 @@
 				259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */,
 				25D441DF1C26AFA400C84D58 /* debug.swift in Sources */,
 				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
+				2562F0B81C1D5F1900C36444 /* GetAPIManager.swift in Sources */,
 				257559541C12E3160031B6CF /* LoginView.swift in Sources */,
 				257559511C12C39D0031B6CF /* TimeLineViewController.swift in Sources */,
+				25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
