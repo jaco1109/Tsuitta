@@ -42,7 +42,6 @@ class LoginViewController: UIViewController, LoginViewDelegate {
                 s.userID
                 self.printAllLoginUserID()
 
-                let page: PagingController = PagingController()
                 let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
                 let controller = storyBoard.instantiateInitialViewController()! as UIViewController
                 
