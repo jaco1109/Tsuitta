@@ -12,9 +12,12 @@ import PagingMenuController
 
 class PagingController: UIViewController, PagingMenuControllerDelegate {
     
+    // TODO: この辺プロパティの記述順とかガバガバなのでなおします
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         view.backgroundColor = UIColor.whiteColor()
         
@@ -37,7 +40,7 @@ class PagingController: UIViewController, PagingMenuControllerDelegate {
         
         pagingMenuController.view.frame.origin.y += UIApplication.sharedApplication().statusBarFrame.size.height + topBorder.frame.size.height
         addChildViewController(pagingMenuController)
-        view.addSubview(pagingMenuController.view)
+//        view.addSubview(pagingMenuController.view)
         pagingMenuController.didMoveToParentViewController(self)
         
     }
