@@ -41,7 +41,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
                 self.printAllLoginUserID()
                 self.navigationController?.pushViewController(TimeLineViewController(), animated: true)
             } else {
-                print("error: \(error?.localizedDescription)")
+                debug("error: \(error?.localizedDescription)")
             }
         }
     }
@@ -85,11 +85,11 @@ class LoginViewController: UIViewController, LoginViewDelegate {
      */
     private func printAllLoginUserID(){
         let loginSessions = Twitter.sharedInstance().sessionStore.existingUserSessions()
-        print("signed in all userIDs:")
+        debug("signed in all userIDs:")
         loginSessions.forEach { (session) -> () in
-            print(session.userID)
+            debug(session.userID)
         }
-        print("---------")
+        debug("---------")
     }
 }
 
