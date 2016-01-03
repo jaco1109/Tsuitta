@@ -105,4 +105,61 @@ class GetAPIManager {
         }
     }
     
+    //MARK: Tweet
+    
+    func tweet(tweetID: String, callback: (TWTRTweet) -> Void){
+        let client = TWTRAPIClient()
+        client.loadTweetWithID(tweetID) { tweet, error in
+            if let t = tweet {
+                callback(t)
+            } else {
+                print("Failed to load Tweet: \(error?.localizedDescription)")
+            }
+        }
+    }
+    
+    
+    func homeTimeLine(callback: ([TWTRTweet]) -> Void){
+        //TODO: とりあえず最新の20件をもってきます。
+        //それ以外のデータに関しては今後取れるように修正します。
+        api.get("/statuses/home_timeline.json", parameter: ["count": "20"]) { (response, data, error) -> Void in
+            if let err = error {
+                print("エラーだよ：\(err.code)")
+                return
+            }
+            var json: AnyObject?
+            do {
+                json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)
+            } catch {
+                return
+            }
+            if let jsonArray = json as? [AnyObject] {
+                let tweets = TWTRTweet.tweetsWithJSONArray(jsonArray) as! [TWTRTweet]
+                callback(tweets)
+            }
+        }
+    }
+    
+    func userTimeLine(var userID: String, callback: ([TWTRTweet]) -> Void){
+        //TODO: とりあえずテストのために自分のuserIDをセットしてます。修正するよ!
+        if let ID = self.userID() {
+            userID = ID
+        }
+        api.get("/statuses/user_timeline.json", parameter: ["user_id": userID, "count": "25"]) { (response, data, error) -> Void in
+            if let err = error {
+                print("エラーだよ：\(err.code)")
+                return
+            }
+            var json: AnyObject?
+            do {
+                json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)
+            } catch {
+                return
+            }
+            if let jsonArray = json as? [AnyObject] {
+                let tweets = TWTRTweet.tweetsWithJSONArray(jsonArray) as! [TWTRTweet]
+                callback(tweets)
+            }
+        }
+    }
 }
