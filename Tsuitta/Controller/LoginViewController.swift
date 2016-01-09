@@ -42,7 +42,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
                 let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
                 let vc = storyBoard.instantiateInitialViewController()! as UIViewController
                 
-                self.navigationController?.pushViewController(TimeLineViewController(), animated: true)
+                self.navigationController?.pushViewController(vc, animated: true)
             } else {
                 debug("error: \(error?.localizedDescription)")
             }
