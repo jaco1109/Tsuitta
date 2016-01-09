@@ -1,19 +1,13 @@
-//
-//  APIManager.swift
-//  Tsuitta
-//
-//  Created by domon on 2015/12/13.
-//  Copyright © 2015年 土門良輔. All rights reserved.
-//
-
 import TwitterKit
 import SwiftyJSON
 
+//TODO: 今は使ってないので後で使わなかったら削除する
 enum APIStatus{
     case Success
     case Error
 }
 
+/// Get系のAPIメソッドがまとまっているクラスです
 class GetAPIManager {
     
     //MARK: property
