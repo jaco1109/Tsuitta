@@ -43,9 +43,9 @@ class LoginViewController: UIViewController, LoginViewDelegate {
                 self.printAllLoginUserID()
 
                 let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
-                let controller = storyBoard.instantiateInitialViewController()! as UIViewController
+                let vc = storyBoard.instantiateInitialViewController()! as UIViewController
                 
-                self.navigationController?.pushViewController(controller, animated: true)
+                self.navigationController?.pushViewController(vc, animated: true)
             } else {
                 print("error: \(error?.localizedDescription)")
             }
