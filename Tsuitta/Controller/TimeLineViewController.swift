@@ -23,7 +23,7 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         loadTweets()
         
-        APILocator.sharedInstance.get.searchUser("Twitter API") {
+        APILocator.sharedInstance.search.users("Twitter API") {
             users in
             users.forEach({ (user) -> () in
                 print("-------------")
@@ -37,13 +37,13 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func loadTweets() {
-        APILocator.sharedInstance.get.searchImage("d") {
+        APILocator.sharedInstance.search.images("d") {
         tweets in
             for tweet in tweets {
                 self.tweets.append(tweet)
             }
         }
-        APILocator.sharedInstance.get.tweet("678556859976933376", callback: { (tweets) -> Void in
+        APILocator.sharedInstance.tweet.tweet("678556859976933376", callback: { (tweets) -> Void in
             self.tweets.append(tweets)
         })
     }
