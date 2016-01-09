@@ -18,6 +18,8 @@
 		065404691C38FA9000E97872 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065404681C38FA9000E97872 /* TabBarController.swift */; };
 		253D5E871C148E6600D59DC0 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 253D5E861C148E6600D59DC0 /* icon.jpg */; };
 		25590F991C391D660024CEC3 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F981C391D660024CEC3 /* TimeLineViewController.swift */; };
+		25590F9B1C40F0060024CEC3 /* PostAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F9A1C40F0060024CEC3 /* PostAPIManager.swift */; };
+		25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F9C1C40F07B0024CEC3 /* APILocator.swift */; };
 		2562F0B81C1D5F1900C36444 /* GetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */; };
 		2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559481C12C2D30031B6CF /* Fabric.framework */; };
 		2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
@@ -85,6 +87,8 @@
 		065404681C38FA9000E97872 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		253D5E861C148E6600D59DC0 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 		25590F981C391D660024CEC3 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		25590F9A1C40F0060024CEC3 /* PostAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAPIManager.swift; sourceTree = "<group>"; };
+		25590F9C1C40F07B0024CEC3 /* APILocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILocator.swift; sourceTree = "<group>"; };
 		2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAPIManager.swift; sourceTree = "<group>"; };
 		257559481C12C2D30031B6CF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		257559491C12C2D30031B6CF /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -357,6 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */,
+				25590F9C1C40F07B0024CEC3 /* APILocator.swift */,
+				25590F9A1C40F0060024CEC3 /* PostAPIManager.swift */,
 				25D441DC1C2527F600C84D58 /* APIClient.swift */,
 			);
 			path = API;
@@ -643,9 +649,11 @@
 				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
 				25590F991C391D660024CEC3 /* TimeLineViewController.swift in Sources */,
 				2562F0B81C1D5F1900C36444 /* GetAPIManager.swift in Sources */,
+				25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */,
 				257559541C12E3160031B6CF /* LoginView.swift in Sources */,
 				25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */,
 				0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */,
+				25590F9B1C40F0060024CEC3 /* PostAPIManager.swift in Sources */,
 				0652FC731C1D587B005006D3 /* HomeView.swift in Sources */,
 				257559511C12C39D0031B6CF /* PagingController.swift in Sources */,
 			);

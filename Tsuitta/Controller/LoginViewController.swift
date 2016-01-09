@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     
     func didTapTsuittaLoginButton() {
 
-        GetAPIManager.sharedInstance.login { (session, error) -> Void in
+        APILocator.sharedInstance.get.login { (session, error) -> Void in
             if let _ = session {
                 let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
                 let vc = storyBoard.instantiateInitialViewController()! as UIViewController
@@ -51,7 +51,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     }
     
     func didTapLogoutButton() {
-        GetAPIManager.sharedInstance.logout()
+        APILocator.sharedInstance.get.logout()
     }
     
     /**

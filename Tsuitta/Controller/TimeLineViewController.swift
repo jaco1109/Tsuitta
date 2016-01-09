@@ -23,7 +23,7 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         loadTweets()
         
-        GetAPIManager.sharedInstance.searchUser("Twitter API") {
+        APILocator.sharedInstance.get.searchUser("Twitter API") {
             users in
             users.forEach({ (user) -> () in
                 print("-------------")
@@ -37,13 +37,13 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func loadTweets() {
-        GetAPIManager.sharedInstance.searchImage("d") {
+        APILocator.sharedInstance.get.searchImage("d") {
         tweets in
             for tweet in tweets {
                 self.tweets.append(tweet)
             }
         }
-        GetAPIManager.sharedInstance.tweet("678556859976933376", callback: { (tweets) -> Void in
+        APILocator.sharedInstance.get.tweet("678556859976933376", callback: { (tweets) -> Void in
             self.tweets.append(tweets)
         })
     }
@@ -67,12 +67,6 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let tweet = tweets[indexPath.row]
         
-        prototypeCell?.configureWithTweet(tweet)
-        
-        if let height = prototypeCell?.calculatedHeightForWidth(self.view.bounds.width) {
-            return height
-        } else {
-            return tableView.estimatedRowHeight
-        }
+        return TWTRTweetTableViewCell.heightForTweet(tweet, width: self.view.bounds.width)
     }
 }
