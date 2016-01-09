@@ -41,6 +41,8 @@ class PagingController: UIViewController, PagingMenuControllerDelegate {
         
         pagingMenuController.view.frame.origin.y += UIApplication.sharedApplication().statusBarFrame.size.height + topBorderHeight
         addChildViewController(pagingMenuController)
+        
+        view.addSubview(pagingMenuController.view)
 
         pagingMenuController.didMoveToParentViewController(self)
         
