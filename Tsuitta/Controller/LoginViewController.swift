@@ -36,43 +36,21 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     //MARK: LoginViewDelegate
     
     func didTapTsuittaLoginButton() {
-        Twitter.sharedInstance().logInWithCompletion { session, error in
-            if let s = session {
-                print("signed in as \(s.userName)");
-                s.userID
-                self.printAllLoginUserID()
 
                 let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
                 let vc = storyBoard.instantiateInitialViewController()! as UIViewController
                 
                 self.navigationController?.pushViewController(vc, animated: true)
+        
             } else {
-                print("error: \(error?.localizedDescription)")
+                debug("error: \(error?.localizedDescription)")
             }
         }
+        
     }
     
     func didTapLogoutButton() {
-        let store = Twitter.sharedInstance().sessionStore
-        let sessions = store.existingUserSessions()
-        
-        if sessions.isEmpty {
-            return
-        }
-        
-        if sessions.count == 1 {
-            return logout(sessions.first!.userID)
-        }
-        
-        let alert = UIAlertController(title: "ログアウトするアカウントを選択してください", message: nil, preferredStyle: .ActionSheet)
-        for session in sessions {
-            alert.addAction(UIAlertAction(title: session.userName, style: .Default, handler: { (_) -> Void in
-                self.logout(session.userID)
-            }))
-        }
-        alert.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil))
-        
-        self.presentViewController(alert, animated: true, completion: nil)
+        GetAPIManager.sharedInstance.logout()
     }
     
     /**
@@ -91,11 +69,11 @@ class LoginViewController: UIViewController, LoginViewDelegate {
      */
     private func printAllLoginUserID(){
         let loginSessions = Twitter.sharedInstance().sessionStore.existingUserSessions()
-        print("signed in all userIDs:")
+        debug("signed in all userIDs:")
         loginSessions.forEach { (session) -> () in
-            print(session.userID)
+            debug(session.userID)
         }
-        print("---------")
+        debug("---------")
     }
 }
 
