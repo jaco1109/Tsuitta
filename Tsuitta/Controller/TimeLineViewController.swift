@@ -67,12 +67,6 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let tweet = tweets[indexPath.row]
         
-        prototypeCell?.configureWithTweet(tweet)
-        
-        if let height = prototypeCell?.calculatedHeightForWidth(self.view.bounds.width) {
-            return height
-        } else {
-            return tableView.estimatedRowHeight
-        }
+        return TWTRTweetTableViewCell.heightForTweet(tweet, width: self.view.bounds.width)
     }
 }
