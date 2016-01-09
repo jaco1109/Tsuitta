@@ -18,8 +18,6 @@ class GetAPIManager {
     
     //MARK: property
     
-    static let sharedInstance = GetAPIManager()
-    
     private let twitter = Twitter.sharedInstance()
     
     private let client = TWTRAPIClient()
@@ -28,7 +26,7 @@ class GetAPIManager {
     
     //MARK: init
     
-    private init(){
+    init(){
         
     }
     
