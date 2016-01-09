@@ -21,4 +21,10 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func viewDidLoad() {
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+    }
+    
 }
