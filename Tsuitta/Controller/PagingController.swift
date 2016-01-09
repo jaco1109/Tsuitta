@@ -21,21 +21,23 @@ class PagingController: UIViewController, PagingMenuControllerDelegate {
         
         super.viewDidLoad()
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
         view.backgroundColor = UIColor.whiteColor()
         
         let homeViewController = HomeViewController()
         let mentionViewController = HomeViewController()
         let messageViewController = HomeViewController()
         
-        homeViewController.title = "ホーム"
-        mentionViewController.title = "メンション"
-        messageViewController.title = "メッセージ"
+        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        let mentionNavigationController = UINavigationController(rootViewController: mentionViewController)
+        let messageNavigationController = UINavigationController(rootViewController: messageViewController)
+        
+        homeNavigationController.title = "ホーム"
+        mentionNavigationController.title = "メンション"
+        messageNavigationController.title = "メッセージ"
         
         self.setTopBorder(topBorderHeight)
         
-        let viewControllers = [homeViewController, mentionViewController, messageViewController]
+        let viewControllers = [homeNavigationController, mentionNavigationController, messageNavigationController]
         let options = self.options()
         let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
         
