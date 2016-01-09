@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        if let view = UINib(nibName: "HomeView", bundle: nil).instantiateWithOwner(self, options: nil).first as? HomeView {
+        if let view = UINib(nibName: "TweetTableView", bundle: nil).instantiateWithOwner(self, options: nil).first as? TweetTableView {
             self.view = view
 //            view.delegate = self
         }

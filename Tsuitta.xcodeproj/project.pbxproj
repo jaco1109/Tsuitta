@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC651C1D4F69005006D3 /* TabBar.storyboard */; };
-		0652FC681C1D5133005006D3 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; };
-		0652FC691C1D5133005006D3 /* PagingMenuController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC6C1C1D5692005006D3 /* HomeViewController.swift */; };
-		0652FC711C1D5856005006D3 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC701C1D5856005006D3 /* HomeView.xib */; };
-		0652FC731C1D587B005006D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* HomeView.swift */; };
+		0652FC711C1D5856005006D3 /* TweetTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC701C1D5856005006D3 /* TweetTableView.xib */; };
+		0652FC731C1D587B005006D3 /* TweetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* TweetTableView.swift */; };
 		0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC771C1D77F2005006D3 /* ConstantColor.swift */; };
 		0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC791C1D7C65005006D3 /* UIColor+hex.swift */; };
-		065404691C38FA9000E97872 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065404681C38FA9000E97872 /* TabBarController.swift */; };
+		06B39C0D1C4128DC0031A0FC /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
+		06B39C111C4129030031A0FC /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
+		06B39C131C41291F0031A0FC /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; };
+		06B39C141C41291F0031A0FC /* PagingMenuController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06B39C161C4129240031A0FC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; };
+		06B39C171C4129240031A0FC /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06B39C181C4129270031A0FC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; };
+		06B39C191C4129270031A0FC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06B39C1D1C412A040031A0FC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559481C12C2D30031B6CF /* Fabric.framework */; };
 		253D5E871C148E6600D59DC0 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 253D5E861C148E6600D59DC0 /* icon.jpg */; };
 		25590F991C391D660024CEC3 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F981C391D660024CEC3 /* TimeLineViewController.swift */; };
 		25590F9B1C40F0060024CEC3 /* PostAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F9A1C40F0060024CEC3 /* PostAPIManager.swift */; };
 		25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F9C1C40F07B0024CEC3 /* APILocator.swift */; };
 		2562F0B81C1D5F1900C36444 /* GetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */; };
-		2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559481C12C2D30031B6CF /* Fabric.framework */; };
-		2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
 		2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */; };
-		2575594F1C12C2D30031B6CF /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
 		257559511C12C39D0031B6CF /* PagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257559501C12C39D0031B6CF /* PagingController.swift */; };
 		257559541C12E3160031B6CF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257559531C12E3160031B6CF /* LoginView.swift */; };
 		257559561C12E3250031B6CF /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257559551C12E3250031B6CF /* LoginView.xib */; };
@@ -35,10 +38,6 @@
 		259DD34C1C00429B00C9B7CE /* TsuittaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD34B1C00429B00C9B7CE /* TsuittaTests.swift */; };
 		259DD3571C00429B00C9B7CE /* TsuittaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */; };
 		259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3901C004E1100C9B7CE /* LoginViewController.swift */; };
-		259DD39C1C00611A00C9B7CE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; };
-		259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; };
-		259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DC1C2527F600C84D58 /* APIClient.swift */; };
 		25D441DF1C26AFA400C84D58 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DE1C26AFA400C84D58 /* debug.swift */; };
 /* End PBXBuildFile section */
@@ -61,15 +60,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		259DD3A01C00611A00C9B7CE /* Embed Frameworks */ = {
+		06B39C151C4129200031A0FC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */,
-				0652FC691C1D5133005006D3 /* PagingMenuController.framework in Embed Frameworks */,
-				259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */,
+				06B39C171C4129240031A0FC /* SwiftyJSON.framework in Embed Frameworks */,
+				06B39C191C4129270031A0FC /* Alamofire.framework in Embed Frameworks */,
+				06B39C141C41291F0031A0FC /* PagingMenuController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,8 +79,8 @@
 		0652FC651C1D4F69005006D3 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0652FC671C1D5133005006D3 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
 		0652FC6C1C1D5692005006D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0652FC701C1D5856005006D3 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeView.xib; path = User/HomeView.xib; sourceTree = SOURCE_ROOT; };
-		0652FC721C1D587B005006D3 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = User/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		0652FC701C1D5856005006D3 /* TweetTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableView.xib; sourceTree = "<group>"; };
+		0652FC721C1D587B005006D3 /* TweetTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableView.swift; sourceTree = "<group>"; };
 		0652FC771C1D77F2005006D3 /* ConstantColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantColor.swift; sourceTree = "<group>"; };
 		0652FC791C1D7C65005006D3 /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		065404681C38FA9000E97872 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -90,7 +89,7 @@
 		25590F9A1C40F0060024CEC3 /* PostAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAPIManager.swift; sourceTree = "<group>"; };
 		25590F9C1C40F07B0024CEC3 /* APILocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILocator.swift; sourceTree = "<group>"; };
 		2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAPIManager.swift; sourceTree = "<group>"; };
-		257559481C12C2D30031B6CF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		257559481C12C2D30031B6CF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Framework/Fabric.framework; sourceTree = "<group>"; };
 		257559491C12C2D30031B6CF /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		2575594B1C12C2D30031B6CF /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
@@ -110,8 +109,8 @@
 		259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsuittaUITests.swift; sourceTree = "<group>"; };
 		259DD3581C00429B00C9B7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		259DD3901C004E1100C9B7CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		259DD3931C005D0E00C9B7CE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		259DD3931C005D0E00C9B7CE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		25D441DC1C2527F600C84D58 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		25D441DE1C26AFA400C84D58 /* debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,12 +120,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2575594F1C12C2D30031B6CF /* TwitterCore.framework in Frameworks */,
-				0652FC681C1D5133005006D3 /* PagingMenuController.framework in Frameworks */,
-				259DD39C1C00611A00C9B7CE /* SwiftyJSON.framework in Frameworks */,
-				259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */,
-				2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */,
-				2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */,
+				06B39C1D1C412A040031A0FC /* Fabric.framework in Frameworks */,
+				06B39C0D1C4128DC0031A0FC /* TwitterCore.framework in Frameworks */,
+				06B39C181C4129270031A0FC /* Alamofire.framework in Frameworks */,
+				06B39C131C41291F0031A0FC /* PagingMenuController.framework in Frameworks */,
+				06B39C111C4129030031A0FC /* TwitterKit.framework in Frameworks */,
+				06B39C161C4129240031A0FC /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +151,17 @@
 			children = (
 				0652FC791C1D7C65005006D3 /* UIColor+hex.swift */,
 			);
-			name = Extension;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		06B39C0C1C4126510031A0FC /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				259DD3851C004D4300C9B7CE /* Detail */,
+				259DD3891C004D4300C9B7CE /* Timeline */,
+				259DD3881C004D4300C9B7CE /* Tweet */,
+			);
+			path = Table;
 			sourceTree = "<group>";
 		};
 		253D5E851C148E5600D59DC0 /* Login */ = {
@@ -175,12 +184,13 @@
 		259DD32A1C00429A00C9B7CE = {
 			isa = PBXGroup;
 			children = (
-				0652FC671C1D5133005006D3 /* PagingMenuController.framework */,
 				259DD3921C00530C00C9B7CE /* Framework */,
+				259DD3341C00429A00C9B7CE /* Products */,
 				259DD3351C00429A00C9B7CE /* Tsuitta */,
 				259DD34A1C00429B00C9B7CE /* TsuittaTests */,
 				259DD3551C00429B00C9B7CE /* TsuittaUITests */,
-				259DD3341C00429A00C9B7CE /* Products */,
+				257559481C12C2D30031B6CF /* Fabric.framework */,
+				0652FC671C1D5133005006D3 /* PagingMenuController.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,16 +209,15 @@
 			children = (
 				259DD36F1C004D4300C9B7CE /* Constant */,
 				259DD3701C004D4300C9B7CE /* Controller */,
+				0652FC7B1C1D7C77005006D3 /* Extension */,
 				259DD3711C004D4300C9B7CE /* Image */,
 				259DD37D1C004D4300C9B7CE /* Model */,
 				259DD3801C004D4300C9B7CE /* View */,
 				259DD3361C00429B00C9B7CE /* AppDelegate.swift */,
-				259DD33A1C00429B00C9B7CE /* Main.storyboard */,
-				0652FC651C1D4F69005006D3 /* TabBar.storyboard */,
 				259DD33D1C00429B00C9B7CE /* Assets.xcassets */,
-				259DD33F1C00429B00C9B7CE /* LaunchScreen.storyboard */,
 				259DD3421C00429B00C9B7CE /* Info.plist */,
-				0652FC7B1C1D7C77005006D3 /* Extension */,
+				259DD33F1C00429B00C9B7CE /* LaunchScreen.storyboard */,
+				259DD33A1C00429B00C9B7CE /* Main.storyboard */,
 			);
 			path = Tsuitta;
 			sourceTree = "<group>";
@@ -216,8 +225,8 @@
 		259DD34A1C00429B00C9B7CE /* TsuittaTests */ = {
 			isa = PBXGroup;
 			children = (
-				259DD34B1C00429B00C9B7CE /* TsuittaTests.swift */,
 				259DD34D1C00429B00C9B7CE /* Info.plist */,
+				259DD34B1C00429B00C9B7CE /* TsuittaTests.swift */,
 			);
 			path = TsuittaTests;
 			sourceTree = "<group>";
@@ -225,8 +234,8 @@
 		259DD3551C00429B00C9B7CE /* TsuittaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */,
 				259DD3581C00429B00C9B7CE /* Info.plist */,
+				259DD3561C00429B00C9B7CE /* TsuittaUITests.swift */,
 			);
 			path = TsuittaUITests;
 			sourceTree = "<group>";
@@ -234,8 +243,8 @@
 		259DD36F1C004D4300C9B7CE /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				25D441DE1C26AFA400C84D58 /* debug.swift */,
 				0652FC771C1D77F2005006D3 /* ConstantColor.swift */,
+				25D441DE1C26AFA400C84D58 /* debug.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -243,11 +252,11 @@
 		259DD3701C004D4300C9B7CE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25590F981C391D660024CEC3 /* TimeLineViewController.swift */,
+				0652FC6C1C1D5692005006D3 /* HomeViewController.swift */,
 				259DD3901C004E1100C9B7CE /* LoginViewController.swift */,
 				257559501C12C39D0031B6CF /* PagingController.swift */,
 				065404681C38FA9000E97872 /* TabBarController.swift */,
-				0652FC6C1C1D5692005006D3 /* HomeViewController.swift */,
+				25590F981C391D660024CEC3 /* TimeLineViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,9 +264,9 @@
 		259DD3711C004D4300C9B7CE /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				253D5E851C148E5600D59DC0 /* Login */,
 				259DD3721C004D4300C9B7CE /* Common */,
 				259DD3731C004D4300C9B7CE /* Config */,
+				253D5E851C148E5600D59DC0 /* Login */,
 				259DD3741C004D4300C9B7CE /* Search */,
 				259DD3751C004D4300C9B7CE /* SearchResult */,
 				259DD3761C004D4300C9B7CE /* TL */,
@@ -360,10 +369,10 @@
 		259DD37E1C004D4300C9B7CE /* API */ = {
 			isa = PBXGroup;
 			children = (
-				2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */,
-				25590F9C1C40F07B0024CEC3 /* APILocator.swift */,
-				25590F9A1C40F0060024CEC3 /* PostAPIManager.swift */,
 				25D441DC1C2527F600C84D58 /* APIClient.swift */,
+				25590F9C1C40F07B0024CEC3 /* APILocator.swift */,
+				2562F0B71C1D5F1900C36444 /* GetAPIManager.swift */,
+				25590F9A1C40F0060024CEC3 /* PostAPIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -378,12 +387,12 @@
 		259DD3801C004D4300C9B7CE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				257559521C12E30B0031B6CF /* Login */,
 				259DD3811C004D4300C9B7CE /* Common */,
 				259DD3821C004D4300C9B7CE /* Config */,
+				257559521C12E30B0031B6CF /* Login */,
 				259DD3831C004D4300C9B7CE /* Search */,
 				259DD3841C004D4300C9B7CE /* SearchResult */,
-				259DD3851C004D4300C9B7CE /* TL */,
+				06B39C0C1C4126510031A0FC /* Table */,
 				259DD38A1C004D4300C9B7CE /* Tweet */,
 				259DD38B1C004D4300C9B7CE /* User */,
 			);
@@ -393,6 +402,7 @@
 		259DD3811C004D4300C9B7CE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0652FC651C1D4F69005006D3 /* TabBar.storyboard */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -418,29 +428,11 @@
 			path = SearchResult;
 			sourceTree = "<group>";
 		};
-		259DD3851C004D4300C9B7CE /* TL */ = {
-			isa = PBXGroup;
-			children = (
-				259DD3861C004D4300C9B7CE /* DM */,
-				259DD3871C004D4300C9B7CE /* Reply */,
-				259DD3881C004D4300C9B7CE /* Tweet */,
-				259DD3891C004D4300C9B7CE /* Home */,
-			);
-			path = TL;
-			sourceTree = "<group>";
-		};
-		259DD3861C004D4300C9B7CE /* DM */ = {
+		259DD3851C004D4300C9B7CE /* Detail */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = DM;
-			sourceTree = "<group>";
-		};
-		259DD3871C004D4300C9B7CE /* Reply */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reply;
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		259DD3881C004D4300C9B7CE /* Tweet */ = {
@@ -450,14 +442,13 @@
 			path = Tweet;
 			sourceTree = "<group>";
 		};
-		259DD3891C004D4300C9B7CE /* Home */ = {
+		259DD3891C004D4300C9B7CE /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				0652FC701C1D5856005006D3 /* HomeView.xib */,
-				0652FC721C1D587B005006D3 /* HomeView.swift */,
+				0652FC721C1D587B005006D3 /* TweetTableView.swift */,
+				0652FC701C1D5856005006D3 /* TweetTableView.xib */,
 			);
-			name = Home;
-			path = User;
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 		259DD38A1C004D4300C9B7CE /* Tweet */ = {
@@ -477,14 +468,13 @@
 		259DD3921C00530C00C9B7CE /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				257559481C12C2D30031B6CF /* Fabric.framework */,
+				259DD3931C005D0E00C9B7CE /* Alamofire.framework */,
+				259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */,
+				2575594B1C12C2D30031B6CF /* TwitterCore.framework */,
 				257559491C12C2D30031B6CF /* TwitterKit.framework */,
 				2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */,
-				2575594B1C12C2D30031B6CF /* TwitterCore.framework */,
-				259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */,
-				259DD3931C005D0E00C9B7CE /* Alamofire.framework */,
 			);
-			name = Framework;
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,8 +487,8 @@
 				259DD32F1C00429A00C9B7CE /* Sources */,
 				259DD3301C00429A00C9B7CE /* Frameworks */,
 				259DD3311C00429A00C9B7CE /* Resources */,
-				259DD3A01C00611A00C9B7CE /* Embed Frameworks */,
 				257559461C12C2390031B6CF /* ShellScript */,
+				06B39C151C4129200031A0FC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -595,7 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */,
-				0652FC711C1D5856005006D3 /* HomeView.xib in Resources */,
+				0652FC711C1D5856005006D3 /* TweetTableView.xib in Resources */,
 				0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */,
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
 				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
@@ -654,7 +644,7 @@
 				25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */,
 				0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */,
 				25590F9B1C40F0060024CEC3 /* PostAPIManager.swift in Sources */,
-				0652FC731C1D587B005006D3 /* HomeView.swift in Sources */,
+				0652FC731C1D587B005006D3 /* TweetTableView.swift in Sources */,
 				257559511C12C39D0031B6CF /* PagingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,6 +687,7 @@
 				259DD33B1C00429B00C9B7CE /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		259DD33F1C00429B00C9B7CE /* LaunchScreen.storyboard */ = {
@@ -705,6 +696,7 @@
 				259DD3401C00429B00C9B7CE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -804,6 +796,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = Tsuitta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -824,6 +817,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = Tsuitta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
