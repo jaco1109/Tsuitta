@@ -36,14 +36,18 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     //MARK: LoginViewDelegate
     
     func didTapTsuittaLoginButton() {
+
         GetAPIManager.sharedInstance.login { (session, error) -> Void in
             if let _ = session {
-                let page: PagingController = PagingController()
-                self.navigationController?.pushViewController(page, animated: true)
+                let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
+                let vc = storyBoard.instantiateInitialViewController()! as UIViewController
+                
+                self.navigationController?.pushViewController(vc, animated: true)
             } else {
                 debug("error: \(error?.localizedDescription)")
             }
         }
+        
     }
     
     func didTapLogoutButton() {

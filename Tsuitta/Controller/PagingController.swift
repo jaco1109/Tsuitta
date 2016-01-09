@@ -12,9 +12,16 @@ import PagingMenuController
 
 class PagingController: UIViewController, PagingMenuControllerDelegate {
     
+    private var topBorder: UIView!
+    
+    // TODO: この辺プロパティの記述順とかガバガバなのでなおします
     override func viewDidLoad() {
         
+        let topBorderHeight: CGFloat = 2
+        
         super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         view.backgroundColor = UIColor.whiteColor()
         
@@ -26,21 +33,17 @@ class PagingController: UIViewController, PagingMenuControllerDelegate {
         mentionViewController.title = "メンション"
         messageViewController.title = "メッセージ"
         
+        self.setTopBorder(topBorderHeight)
+        
         let viewControllers = [homeViewController, mentionViewController, messageViewController]
         let options = self.options()
         let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
         
-        pagingMenuController.view.frame.origin.y += 20
+        pagingMenuController.view.frame.origin.y += UIApplication.sharedApplication().statusBarFrame.size.height + topBorderHeight
         addChildViewController(pagingMenuController)
-        view.addSubview(pagingMenuController.view)
+
         pagingMenuController.didMoveToParentViewController(self)
         
-    }
-    
-    override func loadView() {
-        
-        super.loadView()
-
     }
     
     func options() -> PagingMenuOptions {
@@ -58,6 +61,16 @@ class PagingController: UIViewController, PagingMenuControllerDelegate {
         options.menuDisplayMode = .Infinite(widthMode: PagingMenuOptions.MenuItemWidthMode.Fixed(width: screenW / 100 * 30))
         
         return options
+        
+    }
+    
+    func setTopBorder(height: CGFloat) {
+        
+        self.topBorder = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, height))
+        self.topBorder.backgroundColor = UIColor.blackColor()
+        self.topBorder.frame.origin.y += UIApplication.sharedApplication().statusBarFrame.size.height
+        
+        view.addSubview(self.topBorder)
         
     }
     
