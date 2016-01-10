@@ -193,5 +193,23 @@ class UserAPIManager {
         }
     }
     
+    //MARK: Related
+    
+    //TODO: とりあえずテスト用に作成しました。いらなくなったら削除するかも。
+    func related(sourceId: Int, targetId: Int){
+        //let sId = String(sourceId)
+        let tId = String(targetId)
+        APIClient.get("/friendships/show.json", parameter: ["source_id": id()! , "target_id": tId]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+            let json = JSON(data: data!)
+            let follow = json["relationship"]["source"]["following"].boolValue
+            let mute = json["relationship"]["source"]["muting"].boolValue
+            
+            debug("follow:\(follow) mute:\(mute)")
+        }
+    }
 
 }
