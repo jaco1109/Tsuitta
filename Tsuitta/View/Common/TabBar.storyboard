@@ -119,7 +119,6 @@
         <!--Item-->
         <scene sceneID="oFD-0X-zIO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MFl-E7-ZlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="o37-gL-xb2" customClass="PagingController" customModule="Tsuitta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jQE-pa-o14"/>
@@ -133,6 +132,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="ure-rb-oNt"/>
                     <navigationItem key="navigationItem" id="2DT-bE-B7I"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFl-E7-ZlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="-509"/>
         </scene>

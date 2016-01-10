@@ -4,9 +4,13 @@ import TwitterKit
 class APILocator {
     static let sharedInstance = APILocator()
     
-    let get = GetAPIManager()
+    let auth = AuthAPIManager()
     
-    let post = PostAPIManager()
+    let tweet = TweetAPIManager()
+    
+    let user = UserAPIManager()
+    
+    let search = SearchAPIManager()
     
     private init(){
     

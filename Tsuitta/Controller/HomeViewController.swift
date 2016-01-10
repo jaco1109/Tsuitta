@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UITableViewController {
     
     override func loadView() {
         super.loadView()
