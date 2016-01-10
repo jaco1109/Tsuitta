@@ -43,7 +43,7 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
                 self.tweets.append(tweet)
             }
         }
-        APILocator.sharedInstance.tweet.tweet("678556859976933376", callback: { (tweets) -> Void in
+        APILocator.sharedInstance.tweet.single("678556859976933376", callback: { (tweets) -> Void in
             self.tweets.append(tweets)
         })
     }
