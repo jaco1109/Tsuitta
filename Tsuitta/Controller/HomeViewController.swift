@@ -28,6 +28,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.registerNib(UINib(nibName: "TweetTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         self.view.addSubview(tableView)
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         loadTweets()
         
@@ -61,19 +63,27 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return tweets.count
     }
     
+    // TODO:ツイート文章を上寄せにする
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TweetTableViewCell
         let tweet = tweets[indexPath.row]
-        cell.label.text = tweet.text
+        cell.userId.text = tweet.author.name
+        cell.userName.text = "@" + tweet.author.screenName
+        cell.created.text = self.convertDateToString(tweet.createdAt)
+        cell.tweetText.text = tweet.text
         
         return cell
     }
     
-    // MARK: UITableViewDelegate
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let tweet = tweets[indexPath.row]
+    // MARK: NSDate型の日付を文字列型に変換する
+    // TODO: 「◯◯前」みたいに経過時間を返すようにする
+    private func convertDateToString(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        let dateString: String = dateFormatter.stringFromDate(date)
         
-        return TWTRTweetTableViewCell.heightForTweet(tweet, width: self.view.bounds.width)
+        return dateString
     }
     
 }
