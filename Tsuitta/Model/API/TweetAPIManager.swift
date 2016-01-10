@@ -61,4 +61,26 @@ class TweetAPIManager {
             }
         }
     }
+    
+    //MARK: Compose Tweet
+    
+    func compose(text: String){
+        APIClient.post("/statuses/update.json", parameter: ["status": text]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    func retweet(id: Int){
+        let tweetId = String(id)
+        APIClient.post("/statuses/retweet/" + tweetId + ".json") { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
 }
