@@ -1,15 +1,18 @@
 import TwitterKit
+import SwiftyJSON
 
 class TweetAPIManager {
     
     private let client = TWTRAPIClient()
+    
+    //MARK: Get Tweet
     
     func single(tweetID: String, callback: (TWTRTweet) -> Void){
         client.loadTweetWithID(tweetID) { tweet, error in
             if let t = tweet {
                 callback(t)
             } else {
-                print("Failed to load Tweet: \(error?.localizedDescription)")
+                debug("Failed to load Tweet: \(error?.localizedDescription)")
             }
         }
     }
@@ -20,7 +23,7 @@ class TweetAPIManager {
         //それ以外のデータに関しては今後取れるように修正します。
         APIClient.get("/statuses/home_timeline.json", parameter: ["count": "20"]) { (response, data, error) -> Void in
             if let err = error {
-                print("エラーだよ：\(err.code)")
+                debug("エラーだよ：\(err.code)")
                 return
             }
             var json: AnyObject?
@@ -43,7 +46,7 @@ class TweetAPIManager {
         }
         APIClient.get("/statuses/user_timeline.json", parameter: ["user_id": userID, "count": "25"]) { (response, data, error) -> Void in
             if let err = error {
-                print("エラーだよ：\(err.code)")
+                debug("エラーだよ：\(err.code)")
                 return
             }
             var json: AnyObject?

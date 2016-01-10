@@ -62,13 +62,13 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     private func logout(userID: String){
         let store = Twitter.sharedInstance().sessionStore
         store.logOutUserID(userID)
-        printAllLoginUserID()
+        debugAllLoginUserID()
     }
     
     /**
-     ログイン中のuserIDをすべてprintします。
+     ログイン中のuserIDをすべてdebugします。
      */
-    private func printAllLoginUserID(){
+    private func debugAllLoginUserID(){
         let loginSessions = Twitter.sharedInstance().sessionStore.existingUserSessions()
         debug("signed in all userIDs:")
         loginSessions.forEach { (session) -> () in
