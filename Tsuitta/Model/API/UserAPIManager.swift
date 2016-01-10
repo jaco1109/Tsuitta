@@ -60,5 +60,62 @@ class UserAPIManager {
             callback(user, error)
         }
     }
+    
+    //MARK: Follow
+    
+    func follow(userId: Int){
+        let id = String(userId)
+        APIClient.post("/friendships/create.json", parameter: ["user_id": id, "follow": "true"]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+            
+        }
+    }
+    
+    func remove(userId: Int){
+        let id = String(userId)
+        APIClient.post("/friendships/destroy.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    func followList(callback: ([TWTRCoreUser]) -> Void){
+        APIClient.post("/friends/list.json", parameter: ["user_id": id()!]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
+                let usersData = TWTRUser.usersWithJSONArray(jsonArray) as! [TWTRUser]
+                let coreUsersData = usersData.map{TWTRCoreUser(userData: $0)}
+                
+                callback(coreUsersData)
+            }
+        }
+    }
+    
+    func followerList(callback: ([TWTRCoreUser]) -> Void){
+        //TODO: とりあえず自分のを取得するようにしてます
+        APIClient.post("/followers/list.json", parameter: ["user_id": id()!]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
+                let usersData = TWTRUser.usersWithJSONArray(jsonArray) as! [TWTRUser]
+                let coreUsersData = usersData.map{TWTRCoreUser(userData: $0)}
+                
+                callback(coreUsersData)
+            }
+        }
+    }
+    
 
 }
