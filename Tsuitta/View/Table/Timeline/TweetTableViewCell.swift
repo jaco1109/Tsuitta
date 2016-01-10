@@ -1,5 +1,5 @@
 //
-//  TweetTableView.swift
+//  TweetTableViewCell.swift
 //  Tsuitta
 //
 //  Created by jaco on 2015/12/13.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class TweetTableView: UIView {
+class TweetTableViewCell: UITableViewCell {
     
-    
+    @IBOutlet weak var label: UILabel!
     
 }

@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC651C1D4F69005006D3 /* TabBar.storyboard */; };
 		0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC6C1C1D5692005006D3 /* HomeViewController.swift */; };
-		0652FC711C1D5856005006D3 /* TweetTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC701C1D5856005006D3 /* TweetTableView.xib */; };
-		0652FC731C1D587B005006D3 /* TweetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* TweetTableView.swift */; };
+		0652FC711C1D5856005006D3 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC701C1D5856005006D3 /* TweetTableViewCell.xib */; };
+		0652FC731C1D587B005006D3 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* TweetTableViewCell.swift */; };
 		0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC771C1D77F2005006D3 /* ConstantColor.swift */; };
 		0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC791C1D7C65005006D3 /* UIColor+hex.swift */; };
 		06B39C0D1C4128DC0031A0FC /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
@@ -81,8 +81,8 @@
 		0652FC651C1D4F69005006D3 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0652FC671C1D5133005006D3 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
 		0652FC6C1C1D5692005006D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0652FC701C1D5856005006D3 /* TweetTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableView.xib; sourceTree = "<group>"; };
-		0652FC721C1D587B005006D3 /* TweetTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableView.swift; sourceTree = "<group>"; };
+		0652FC701C1D5856005006D3 /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		0652FC721C1D587B005006D3 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		0652FC771C1D77F2005006D3 /* ConstantColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantColor.swift; sourceTree = "<group>"; };
 		0652FC791C1D7C65005006D3 /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		065404681C38FA9000E97872 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -373,12 +373,12 @@
 		259DD37E1C004D4300C9B7CE /* API */ = {
 			isa = PBXGroup;
 			children = (
-				25590FA21C4103D10024CEC3 /* SearchAPIManager.swift */,
-				25590F9E1C4103650024CEC3 /* UserAPIManager.swift */,
-				25590FA41C4103F10024CEC3 /* AuthAPIManager.swift */,
-				25590FA01C4103930024CEC3 /* TweetAPIManager.swift */,
-				25590F9C1C40F07B0024CEC3 /* APILocator.swift */,
 				25D441DC1C2527F600C84D58 /* APIClient.swift */,
+				25590F9C1C40F07B0024CEC3 /* APILocator.swift */,
+				25590FA41C4103F10024CEC3 /* AuthAPIManager.swift */,
+				25590FA21C4103D10024CEC3 /* SearchAPIManager.swift */,
+				25590FA01C4103930024CEC3 /* TweetAPIManager.swift */,
+				25590F9E1C4103650024CEC3 /* UserAPIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -451,8 +451,8 @@
 		259DD3891C004D4300C9B7CE /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				0652FC721C1D587B005006D3 /* TweetTableView.swift */,
-				0652FC701C1D5856005006D3 /* TweetTableView.xib */,
+				0652FC721C1D587B005006D3 /* TweetTableViewCell.swift */,
+				0652FC701C1D5856005006D3 /* TweetTableViewCell.xib */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -591,7 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */,
-				0652FC711C1D5856005006D3 /* TweetTableView.xib in Resources */,
+				0652FC711C1D5856005006D3 /* TweetTableViewCell.xib in Resources */,
 				0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */,
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
 				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
@@ -650,7 +650,7 @@
 				25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */,
 				0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */,
 				25590F9F1C4103650024CEC3 /* UserAPIManager.swift in Sources */,
-				0652FC731C1D587B005006D3 /* TweetTableView.swift in Sources */,
+				0652FC731C1D587B005006D3 /* TweetTableViewCell.swift in Sources */,
 				25590FA51C4103F10024CEC3 /* AuthAPIManager.swift in Sources */,
 				25590FA11C4103930024CEC3 /* TweetAPIManager.swift in Sources */,
 				257559511C12C39D0031B6CF /* PagingController.swift in Sources */,
