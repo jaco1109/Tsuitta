@@ -1,10 +1,13 @@
 import TwitterKit
+import SwiftyJSON
 
 class UserAPIManager {
     
     private let twitter = Twitter.sharedInstance()
     
     private let client = TWTRAPIClient()
+    
+    //MARK: userData
     
     func id() -> String? {
         if let userID = twitter.sessionStore.session()?.userID {
