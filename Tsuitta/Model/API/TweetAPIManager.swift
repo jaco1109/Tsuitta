@@ -83,4 +83,40 @@ class TweetAPIManager {
         }
     }
     
+    //MARK: Like
+    
+    func like(likeId: Int){
+        let id = String(likeId)
+        APIClient.post("/favorites/create.json", parameter: ["id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    func undoLike(likeId: Int){
+        let id = String(likeId)
+        APIClient.post("/favorites/destroy.json", parameter: ["id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    func likeList(callback: ([TWTRTweet]) -> Void){
+        //TODO: とりあえず自分のお気にリスト取得します
+        APIClient.get("/favorites/list.json", parameter: ["user_id": APILocator.sharedInstance.user.id()! ]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
+                let tweets = TWTRTweet.tweetsWithJSONArray(jsonArray) as! [TWTRTweet]
+                callback(tweets)
+            }
+        }
+    }
 }
