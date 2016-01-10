@@ -23,6 +23,19 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         loadTweets()
         
+        self.navigationController?.navigationBarHidden = false
+        
+        settingTest()
+    }
+    
+    func settingTest(){
+        APILocator.sharedInstance.setting.iconImage()
+        var account = Account()
+        account.description = "よろしこしこ"
+        APILocator.sharedInstance.setting.profile(account)
+    }
+    
+    func searchTest(){
         APILocator.sharedInstance.search.users("Twitter API") {
             users in
             users.forEach({ (user) -> () in
@@ -30,10 +43,43 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
                 debug(user.userID)
             })
         }
+    }
+    
+    func muteTest(){
+        let id = 213587955
+        APILocator.sharedInstance.user.mute(id)
+        NSThread.sleepForTimeInterval(5)
+        APILocator.sharedInstance.user.related(id, targetId: id)
         
-        self.navigationController?.navigationBarHidden = false
+        APILocator.sharedInstance.user.undoMute(id)
+        NSThread.sleepForTimeInterval(5)
+        APILocator.sharedInstance.user.related(id, targetId: id)
+    }
+    
+    func followTest(){
+        let id = 213587955
+        APILocator.sharedInstance.user.follow(id)
+        NSThread.sleepForTimeInterval(5)
+        APILocator.sharedInstance.user.related(id, targetId: id)
         
-        //self.navigationController?.navigationBar.translucent = false
+        APILocator.sharedInstance.user.remove(id)
+        NSThread.sleepForTimeInterval(5)
+        APILocator.sharedInstance.user.related(id, targetId: id)
+        
+    }
+    
+    func likeTest(){
+        let id = 678556859976933376
+        APILocator.sharedInstance.tweet.like(id)
+        NSThread.sleepForTimeInterval(5)
+        APILocator.sharedInstance.tweet.likeList(){
+            tweets in
+        }
+        APILocator.sharedInstance.tweet.undoLike(id)
+        NSThread.sleepForTimeInterval(5)
+        APILocator.sharedInstance.tweet.likeList(){
+            tweets in
+        }
     }
     
     func loadTweets() {
