@@ -155,5 +155,43 @@ class UserAPIManager {
         }
     }
     
+    //MARK: Block
+    
+    func block(blockId: Int){
+        let id = String(blockId)
+        APIClient.post("/blocks/create.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+        }
+    }
+    
+    func undoBlock(blockId: Int){
+        let id = String(blockId)
+        APIClient.post("/blocks/create.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+        }
+    }
+    
+    func blockList(callback: ([TWTRCoreUser]) -> Void){
+        APIClient.get("/mutes/users/list.json") { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
+                let usersData = TWTRUser.usersWithJSONArray(jsonArray) as! [TWTRUser]
+                let coreUsersData = usersData.map{TWTRCoreUser(userData: $0)}
+                
+                callback(coreUsersData)
+            }
+        }
+    }
+    
 
 }
