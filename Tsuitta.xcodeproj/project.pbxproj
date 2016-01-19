@@ -23,6 +23,8 @@
 		25590FA11C4103930024CEC3 /* TweetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590FA01C4103930024CEC3 /* TweetAPIManager.swift */; };
 		25590FA31C4103D10024CEC3 /* SearchAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590FA21C4103D10024CEC3 /* SearchAPIManager.swift */; };
 		25590FA51C4103F10024CEC3 /* AuthAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590FA41C4103F10024CEC3 /* AuthAPIManager.swift */; };
+		25590FCD1C424D7F0024CEC3 /* SettingAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590FCC1C424D7F0024CEC3 /* SettingAPIManager.swift */; };
+		25590FCF1C4258FC0024CEC3 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25590FCE1C4258FC0024CEC3 /* sample.jpg */; };
 		2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559481C12C2D30031B6CF /* Fabric.framework */; };
 		2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
 		2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */; };
@@ -94,6 +96,8 @@
 		25590FA01C4103930024CEC3 /* TweetAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetAPIManager.swift; sourceTree = "<group>"; };
 		25590FA21C4103D10024CEC3 /* SearchAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPIManager.swift; sourceTree = "<group>"; };
 		25590FA41C4103F10024CEC3 /* AuthAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPIManager.swift; sourceTree = "<group>"; };
+		25590FCC1C424D7F0024CEC3 /* SettingAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAPIManager.swift; sourceTree = "<group>"; };
+		25590FCE1C4258FC0024CEC3 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		257559481C12C2D30031B6CF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		257559491C12C2D30031B6CF /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 		259DD3721C004D4300C9B7CE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				25590FCE1C4258FC0024CEC3 /* sample.jpg */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				25590F9E1C4103650024CEC3 /* UserAPIManager.swift */,
 				25590FA41C4103F10024CEC3 /* AuthAPIManager.swift */,
 				25590FA01C4103930024CEC3 /* TweetAPIManager.swift */,
+				25590FCC1C424D7F0024CEC3 /* SettingAPIManager.swift */,
 				25590F9C1C40F07B0024CEC3 /* APILocator.swift */,
 				25D441DC1C2527F600C84D58 /* APIClient.swift */,
 			);
@@ -604,6 +610,7 @@
 				0652FC711C1D5856005006D3 /* HomeView.xib in Resources */,
 				0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */,
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
+				25590FCF1C4258FC0024CEC3 /* sample.jpg in Resources */,
 				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
 				259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */,
 				253D5E871C148E6600D59DC0 /* icon.jpg in Resources */,
@@ -663,6 +670,7 @@
 				0652FC731C1D587B005006D3 /* HomeView.swift in Sources */,
 				25590FA51C4103F10024CEC3 /* AuthAPIManager.swift in Sources */,
 				25590FA11C4103930024CEC3 /* TweetAPIManager.swift in Sources */,
+				25590FCD1C424D7F0024CEC3 /* SettingAPIManager.swift in Sources */,
 				257559511C12C39D0031B6CF /* PagingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

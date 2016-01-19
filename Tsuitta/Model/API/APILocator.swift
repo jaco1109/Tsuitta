@@ -12,6 +12,8 @@ class APILocator {
     
     let search = SearchAPIManager()
     
+    let setting = SettingAPIManager()
+    
     private init(){
     
     }
