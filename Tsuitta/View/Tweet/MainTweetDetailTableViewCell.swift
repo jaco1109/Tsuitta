@@ -1,6 +1,7 @@
 import UIKit
 import TwitterKit
 
+/// ツイート詳細画面のメインのツイート部分のView
 class MainTweetDetailTableViewCell: UITableViewCell {
     
     private var mainTweetView: MainTweetView?

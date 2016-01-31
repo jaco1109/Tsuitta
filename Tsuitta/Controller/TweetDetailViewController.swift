@@ -1,6 +1,7 @@
 import UIKit
 import TwitterKit
 
+/// ツイート詳細画面のViewController
 class TweetDetailViewController: UIViewController {
     
     private var tweet: TWTRTweet!

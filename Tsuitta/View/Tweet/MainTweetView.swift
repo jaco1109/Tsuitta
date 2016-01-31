@@ -1,6 +1,7 @@
 import UIKit
 import TwitterKit
 
+/// ツイート詳細画面のメインのツイートの一部。ツイートの内容を表示するView。特にActionはない。
 class MainTweetView: UIView {
     
     @IBOutlet weak private var profileImageView: UIImageView!
