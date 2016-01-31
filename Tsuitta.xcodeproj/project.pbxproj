@@ -16,6 +16,8 @@
 		0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC771C1D77F2005006D3 /* ConstantColor.swift */; };
 		0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC791C1D7C65005006D3 /* UIColor+hex.swift */; };
 		2524D5961C5DD3E500703B27 /* TweetComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524D5951C5DD3E500703B27 /* TweetComposeViewController.swift */; };
+		2524D5991C5DD48B00703B27 /* TweetComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524D5981C5DD48B00703B27 /* TweetComposeView.swift */; };
+		2524D59B1C5DD4B500703B27 /* TweetComposeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2524D59A1C5DD4B500703B27 /* TweetComposeView.xib */; };
 		253D5E871C148E6600D59DC0 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 253D5E861C148E6600D59DC0 /* icon.jpg */; };
 		25590F991C391D660024CEC3 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F981C391D660024CEC3 /* TimeLineViewController.swift */; };
 		25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F9C1C40F07B0024CEC3 /* APILocator.swift */; };
@@ -90,6 +92,8 @@
 		0652FC791C1D7C65005006D3 /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		065404681C38FA9000E97872 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2524D5951C5DD3E500703B27 /* TweetComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetComposeViewController.swift; sourceTree = "<group>"; };
+		2524D5981C5DD48B00703B27 /* TweetComposeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetComposeView.swift; sourceTree = "<group>"; };
+		2524D59A1C5DD4B500703B27 /* TweetComposeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetComposeView.xib; sourceTree = "<group>"; };
 		253D5E861C148E6600D59DC0 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 		25590F981C391D660024CEC3 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		25590F9C1C40F07B0024CEC3 /* APILocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILocator.swift; sourceTree = "<group>"; };
@@ -162,6 +166,15 @@
 				0652FC791C1D7C65005006D3 /* UIColor+hex.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		2524D5971C5DD48000703B27 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				2524D5981C5DD48B00703B27 /* TweetComposeView.swift */,
+				2524D59A1C5DD4B500703B27 /* TweetComposeView.xib */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 		253D5E851C148E5600D59DC0 /* Login */ = {
@@ -392,6 +405,7 @@
 		259DD3801C004D4300C9B7CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2524D5971C5DD48000703B27 /* Compose */,
 				257559521C12E30B0031B6CF /* Login */,
 				259DD3811C004D4300C9B7CE /* Common */,
 				259DD3821C004D4300C9B7CE /* Config */,
@@ -609,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */,
+				2524D59B1C5DD4B500703B27 /* TweetComposeView.xib in Resources */,
 				0652FC711C1D5856005006D3 /* HomeView.xib in Resources */,
 				0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */,
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
@@ -657,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2524D5991C5DD48B00703B27 /* TweetComposeView.swift in Sources */,
 				0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */,
 				0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */,
 				2524D5961C5DD3E500703B27 /* TweetComposeViewController.swift in Sources */,
