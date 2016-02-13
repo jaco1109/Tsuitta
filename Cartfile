@@ -1,3 +1,4 @@
 github "SwiftyJSON/SwiftyJSON"
 github "Alamofire/Alamofire" ~> 3.0
 github "kitasuke/PagingMenuController"
+github "rs/SDWebImage"
