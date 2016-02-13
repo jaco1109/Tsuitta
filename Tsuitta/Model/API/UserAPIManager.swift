@@ -61,6 +61,19 @@ class UserAPIManager {
         }
     }
     
+    //TODO:とりあえず適当に作ります。あとで修正してね！
+    func profileDetailData(userId: Int, callback: ProfileDetailData -> Void) {
+        let id = String(userId)
+        APIClient.get("/users/show.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.description)")
+                return
+            }
+            let profile = ProfileDetailData(json: JSON(data: data!))
+            callback(profile)
+        }
+    }
+    
     //MARK: Follow
     
     func follow(userId: Int){
