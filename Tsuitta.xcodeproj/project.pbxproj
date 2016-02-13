@@ -55,6 +55,7 @@
 		259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; };
 		259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		259EB8311C674296002A3ED9 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259EB8301C674296002A3ED9 /* UserDetailViewController.swift */; };
 		25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DC1C2527F600C84D58 /* APIClient.swift */; };
 		25D441DF1C26AFA400C84D58 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DE1C26AFA400C84D58 /* debug.swift */; };
 /* End PBXBuildFile section */
@@ -144,6 +145,7 @@
 		259DD3901C004E1100C9B7CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		259DD3931C005D0E00C9B7CE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		259EB8301C674296002A3ED9 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		25D441DC1C2527F600C84D58 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		25D441DE1C26AFA400C84D58 /* debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +295,7 @@
 				0652FC6C1C1D5692005006D3 /* HomeViewController.swift */,
 				2524D5851C54D2E600703B27 /* TweetDetailViewController.swift */,
 				2524D5951C5DD3E500703B27 /* TweetComposeViewController.swift */,
+				259EB8301C674296002A3ED9 /* UserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */,
 				0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */,
 				2524D5961C5DD3E500703B27 /* TweetComposeViewController.swift in Sources */,
+				259EB8311C674296002A3ED9 /* UserDetailViewController.swift in Sources */,
 				25590FA31C4103D10024CEC3 /* SearchAPIManager.swift in Sources */,
 				259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */,
 				25D441DF1C26AFA400C84D58 /* debug.swift in Sources */,
