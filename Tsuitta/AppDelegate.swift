@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Twitter()])
         
+        self.window?.backgroundColor = UIColor.whiteColor()
+        
         return true
     }
 
