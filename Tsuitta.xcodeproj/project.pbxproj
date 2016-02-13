@@ -55,6 +55,16 @@
 		259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; };
 		259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259DD3931C005D0E00C9B7CE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		259EB8311C674296002A3ED9 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259EB8301C674296002A3ED9 /* UserDetailViewController.swift */; };
+		259EB8351C6EF189002A3ED9 /* UserDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259EB8341C6EF189002A3ED9 /* UserDetailView.xib */; };
+		259EB8371C6EF195002A3ED9 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259EB8361C6EF195002A3ED9 /* UserDetailView.swift */; };
+		259EB8391C6EF3CF002A3ED9 /* UserDetailInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259EB8381C6EF3CF002A3ED9 /* UserDetailInfoViewCell.swift */; };
+		259EB83B1C6EF3D7002A3ED9 /* UserDetailActionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259EB83A1C6EF3D7002A3ED9 /* UserDetailActionViewCell.swift */; };
+		259EB83D1C6EF3F5002A3ED9 /* UserDetailInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259EB83C1C6EF3F5002A3ED9 /* UserDetailInfoViewCell.xib */; };
+		259EB83F1C6EF408002A3ED9 /* UserDetailActionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259EB83E1C6EF408002A3ED9 /* UserDetailActionViewCell.xib */; };
+		259EB8411C6F05C0002A3ED9 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259EB8401C6F05C0002A3ED9 /* WebImage.framework */; };
+		259EB8421C6F05C0002A3ED9 /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259EB8401C6F05C0002A3ED9 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		259EB8441C6F08DF002A3ED9 /* ProfileDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259EB8431C6F08DF002A3ED9 /* ProfileDetailData.swift */; };
 		25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DC1C2527F600C84D58 /* APIClient.swift */; };
 		25D441DF1C26AFA400C84D58 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DE1C26AFA400C84D58 /* debug.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +96,7 @@
 				259DD39D1C00611A00C9B7CE /* SwiftyJSON.framework in Embed Frameworks */,
 				0652FC691C1D5133005006D3 /* PagingMenuController.framework in Embed Frameworks */,
 				259DD39F1C00611A00C9B7CE /* Alamofire.framework in Embed Frameworks */,
+				259EB8421C6F05C0002A3ED9 /* WebImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +155,15 @@
 		259DD3901C004E1100C9B7CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		259DD3931C005D0E00C9B7CE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		259DD3951C005D1A00C9B7CE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		259EB8301C674296002A3ED9 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		259EB8341C6EF189002A3ED9 /* UserDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailView.xib; sourceTree = "<group>"; };
+		259EB8361C6EF195002A3ED9 /* UserDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		259EB8381C6EF3CF002A3ED9 /* UserDetailInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailInfoViewCell.swift; sourceTree = "<group>"; };
+		259EB83A1C6EF3D7002A3ED9 /* UserDetailActionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailActionViewCell.swift; sourceTree = "<group>"; };
+		259EB83C1C6EF3F5002A3ED9 /* UserDetailInfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailInfoViewCell.xib; sourceTree = "<group>"; };
+		259EB83E1C6EF408002A3ED9 /* UserDetailActionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailActionViewCell.xib; sourceTree = "<group>"; };
+		259EB8401C6F05C0002A3ED9 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		259EB8431C6F08DF002A3ED9 /* ProfileDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailData.swift; sourceTree = "<group>"; };
 		25D441DC1C2527F600C84D58 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		25D441DE1C26AFA400C84D58 /* debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +177,7 @@
 				0652FC681C1D5133005006D3 /* PagingMenuController.framework in Frameworks */,
 				259DD39C1C00611A00C9B7CE /* SwiftyJSON.framework in Frameworks */,
 				259DD39E1C00611A00C9B7CE /* Alamofire.framework in Frameworks */,
+				259EB8411C6F05C0002A3ED9 /* WebImage.framework in Frameworks */,
 				2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */,
 				2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */,
 			);
@@ -218,6 +239,7 @@
 		259DD32A1C00429A00C9B7CE = {
 			isa = PBXGroup;
 			children = (
+				259EB8401C6F05C0002A3ED9 /* WebImage.framework */,
 				0652FC671C1D5133005006D3 /* PagingMenuController.framework */,
 				259DD3921C00530C00C9B7CE /* Framework */,
 				259DD3351C00429A00C9B7CE /* Tsuitta */,
@@ -293,6 +315,7 @@
 				0652FC6C1C1D5692005006D3 /* HomeViewController.swift */,
 				2524D5851C54D2E600703B27 /* TweetDetailViewController.swift */,
 				2524D5951C5DD3E500703B27 /* TweetComposeViewController.swift */,
+				259EB8301C674296002A3ED9 /* UserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -420,6 +443,7 @@
 		259DD37F1C004D4300C9B7CE /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				259EB8431C6F08DF002A3ED9 /* ProfileDetailData.swift */,
 			);
 			name = DataBase;
 			path = UserData;
@@ -527,6 +551,12 @@
 		259DD38B1C004D4300C9B7CE /* User */ = {
 			isa = PBXGroup;
 			children = (
+				259EB8341C6EF189002A3ED9 /* UserDetailView.xib */,
+				259EB8361C6EF195002A3ED9 /* UserDetailView.swift */,
+				259EB83C1C6EF3F5002A3ED9 /* UserDetailInfoViewCell.xib */,
+				259EB8381C6EF3CF002A3ED9 /* UserDetailInfoViewCell.swift */,
+				259EB83E1C6EF408002A3ED9 /* UserDetailActionViewCell.xib */,
+				259EB83A1C6EF3D7002A3ED9 /* UserDetailActionViewCell.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -654,6 +684,8 @@
 				2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */,
 				2524D59B1C5DD4B500703B27 /* TweetComposeView.xib in Resources */,
 				0652FC711C1D5856005006D3 /* HomeView.xib in Resources */,
+				259EB83D1C6EF3F5002A3ED9 /* UserDetailInfoViewCell.xib in Resources */,
+				259EB83F1C6EF408002A3ED9 /* UserDetailActionViewCell.xib in Resources */,
 				0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */,
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
 				25590FCF1C4258FC0024CEC3 /* sample.jpg in Resources */,
@@ -661,6 +693,7 @@
 				259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */,
 				253D5E871C148E6600D59DC0 /* icon.jpg in Resources */,
 				257559561C12E3250031B6CF /* LoginView.xib in Resources */,
+				259EB8351C6EF189002A3ED9 /* UserDetailView.xib in Resources */,
 				2524D58A1C54D36D00703B27 /* TweetDetailView.xib in Resources */,
 				2524D58C1C54D65600703B27 /* MainTweetDetailTableViewCell.xib in Resources */,
 				2524D5921C55029100703B27 /* MainTweetView.xib in Resources */,
@@ -708,14 +741,18 @@
 				0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */,
 				0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */,
 				2524D5961C5DD3E500703B27 /* TweetComposeViewController.swift in Sources */,
+				259EB8311C674296002A3ED9 /* UserDetailViewController.swift in Sources */,
 				25590FA31C4103D10024CEC3 /* SearchAPIManager.swift in Sources */,
 				259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */,
 				25D441DF1C26AFA400C84D58 /* debug.swift in Sources */,
+				259EB8441C6F08DF002A3ED9 /* ProfileDetailData.swift in Sources */,
 				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
 				25590F991C391D660024CEC3 /* TimeLineViewController.swift in Sources */,
 				25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */,
 				257559541C12E3160031B6CF /* LoginView.swift in Sources */,
+				259EB8391C6EF3CF002A3ED9 /* UserDetailInfoViewCell.swift in Sources */,
 				2524D59D1C5DDCE700703B27 /* UIView+BorderForIB.swift in Sources */,
+				259EB8371C6EF195002A3ED9 /* UserDetailView.swift in Sources */,
 				25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */,
 				0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */,
 				2524D5861C54D2E600703B27 /* TweetDetailViewController.swift in Sources */,
@@ -727,6 +764,7 @@
 				25590FA11C4103930024CEC3 /* TweetAPIManager.swift in Sources */,
 				25590FCD1C424D7F0024CEC3 /* SettingAPIManager.swift in Sources */,
 				2524D5881C54D36200703B27 /* TweetDetailView.swift in Sources */,
+				259EB83B1C6EF3D7002A3ED9 /* UserDetailActionViewCell.swift in Sources */,
 				257559511C12C39D0031B6CF /* PagingController.swift in Sources */,
 				2524D5941C550D0700703B27 /* UIView+Constraint.swift in Sources */,
 			);
