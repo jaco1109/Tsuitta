@@ -15,7 +15,6 @@
 		0652FC731C1D587B005006D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* HomeView.swift */; };
 		0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC771C1D77F2005006D3 /* ConstantColor.swift */; };
 		0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC791C1D7C65005006D3 /* UIColor+hex.swift */; };
-		065404691C38FA9000E97872 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065404681C38FA9000E97872 /* TabBarController.swift */; };
 		2524D5861C54D2E600703B27 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524D5851C54D2E600703B27 /* TweetDetailViewController.swift */; };
 		2524D5881C54D36200703B27 /* TweetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524D5871C54D36200703B27 /* TweetDetailView.swift */; };
 		2524D58A1C54D36D00703B27 /* TweetDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2524D5891C54D36D00703B27 /* TweetDetailView.xib */; };
@@ -67,6 +66,7 @@
 		259EB8441C6F08DF002A3ED9 /* ProfileDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259EB8431C6F08DF002A3ED9 /* ProfileDetailData.swift */; };
 		25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DC1C2527F600C84D58 /* APIClient.swift */; };
 		25D441DF1C26AFA400C84D58 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DE1C26AFA400C84D58 /* debug.swift */; };
+		25FF51321C799D7C009C1649 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51311C799D7C009C1649 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +166,7 @@
 		259EB8431C6F08DF002A3ED9 /* ProfileDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailData.swift; sourceTree = "<group>"; };
 		25D441DC1C2527F600C84D58 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		25D441DE1C26AFA400C84D58 /* debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
+		25FF51311C799D7C009C1649 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +317,7 @@
 				2524D5851C54D2E600703B27 /* TweetDetailViewController.swift */,
 				2524D5951C5DD3E500703B27 /* TweetComposeViewController.swift */,
 				259EB8301C674296002A3ED9 /* UserDetailViewController.swift */,
+				25FF51311C799D7C009C1649 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -744,6 +746,7 @@
 				259EB8311C674296002A3ED9 /* UserDetailViewController.swift in Sources */,
 				25590FA31C4103D10024CEC3 /* SearchAPIManager.swift in Sources */,
 				259DD3911C004E1100C9B7CE /* LoginViewController.swift in Sources */,
+				25FF51321C799D7C009C1649 /* SearchViewController.swift in Sources */,
 				25D441DF1C26AFA400C84D58 /* debug.swift in Sources */,
 				259EB8441C6F08DF002A3ED9 /* ProfileDetailData.swift in Sources */,
 				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
@@ -910,7 +913,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hr790501@gmail.com (79XUFMB7LP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
