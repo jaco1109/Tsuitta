@@ -67,6 +67,8 @@
 		25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DC1C2527F600C84D58 /* APIClient.swift */; };
 		25D441DF1C26AFA400C84D58 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DE1C26AFA400C84D58 /* debug.swift */; };
 		25FF51321C799D7C009C1649 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51311C799D7C009C1649 /* SearchViewController.swift */; };
+		25FF51341C799E24009C1649 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51331C799E24009C1649 /* SearchView.swift */; };
+		25FF51361C799E3B009C1649 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,8 @@
 		25D441DC1C2527F600C84D58 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		25D441DE1C26AFA400C84D58 /* debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
 		25FF51311C799D7C009C1649 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		25FF51331C799E24009C1649 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +488,8 @@
 		259DD3831C004D4300C9B7CE /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				25FF51331C799E24009C1649 /* SearchView.swift */,
+				25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -754,6 +760,7 @@
 				25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */,
 				257559541C12E3160031B6CF /* LoginView.swift in Sources */,
 				259EB8391C6EF3CF002A3ED9 /* UserDetailInfoViewCell.swift in Sources */,
+				25FF51361C799E3B009C1649 /* SearchTableViewCell.swift in Sources */,
 				2524D59D1C5DDCE700703B27 /* UIView+BorderForIB.swift in Sources */,
 				259EB8371C6EF195002A3ED9 /* UserDetailView.swift in Sources */,
 				25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */,
@@ -767,6 +774,7 @@
 				25590FA11C4103930024CEC3 /* TweetAPIManager.swift in Sources */,
 				25590FCD1C424D7F0024CEC3 /* SettingAPIManager.swift in Sources */,
 				2524D5881C54D36200703B27 /* TweetDetailView.swift in Sources */,
+				25FF51341C799E24009C1649 /* SearchView.swift in Sources */,
 				259EB83B1C6EF3D7002A3ED9 /* UserDetailActionViewCell.swift in Sources */,
 				257559511C12C39D0031B6CF /* PagingController.swift in Sources */,
 				2524D5941C550D0700703B27 /* UIView+Constraint.swift in Sources */,
