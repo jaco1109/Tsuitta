@@ -68,9 +68,9 @@
 		25D441DF1C26AFA400C84D58 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D441DE1C26AFA400C84D58 /* debug.swift */; };
 		25FF51321C799D7C009C1649 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51311C799D7C009C1649 /* SearchViewController.swift */; };
 		25FF51341C799E24009C1649 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51331C799E24009C1649 /* SearchView.swift */; };
-		25FF51361C799E3B009C1649 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */; };
+		25FF51361C799E3B009C1649 /* NothingSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51351C799E3B009C1649 /* NothingSearchResultTableViewCell.swift */; };
 		25FF51381C799E95009C1649 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FF51371C799E95009C1649 /* SearchView.xib */; };
-		25FF513A1C799EA6009C1649 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FF51391C799EA6009C1649 /* SearchTableViewCell.xib */; };
+		25FF513A1C799EA6009C1649 /* NothingSearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FF51391C799EA6009C1649 /* NothingSearchResultTableViewCell.xib */; };
 		25FF513C1C799F24009C1649 /* SearchHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FF513B1C799F24009C1649 /* SearchHeaderTableViewCell.xib */; };
 		25FF513E1C799F2D009C1649 /* SearchHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF513D1C799F2D009C1649 /* SearchHeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -174,9 +174,9 @@
 		25D441DE1C26AFA400C84D58 /* debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
 		25FF51311C799D7C009C1649 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		25FF51331C799E24009C1649 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		25FF51351C799E3B009C1649 /* NothingSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NothingSearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		25FF51371C799E95009C1649 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
-		25FF51391C799EA6009C1649 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		25FF51391C799EA6009C1649 /* NothingSearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingSearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		25FF513B1C799F24009C1649 /* SearchHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		25FF513D1C799F2D009C1649 /* SearchHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -500,8 +500,8 @@
 				25FF51371C799E95009C1649 /* SearchView.xib */,
 				25FF513D1C799F2D009C1649 /* SearchHeaderTableViewCell.swift */,
 				25FF513B1C799F24009C1649 /* SearchHeaderTableViewCell.xib */,
-				25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */,
-				25FF51391C799EA6009C1649 /* SearchTableViewCell.xib */,
+				25FF51351C799E3B009C1649 /* NothingSearchResultTableViewCell.swift */,
+				25FF51391C799EA6009C1649 /* NothingSearchResultTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -713,7 +713,7 @@
 				25590FCF1C4258FC0024CEC3 /* sample.jpg in Resources */,
 				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
 				259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */,
-				25FF513A1C799EA6009C1649 /* SearchTableViewCell.xib in Resources */,
+				25FF513A1C799EA6009C1649 /* NothingSearchResultTableViewCell.xib in Resources */,
 				253D5E871C148E6600D59DC0 /* icon.jpg in Resources */,
 				257559561C12E3250031B6CF /* LoginView.xib in Resources */,
 				259EB8351C6EF189002A3ED9 /* UserDetailView.xib in Resources */,
@@ -775,7 +775,7 @@
 				25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */,
 				257559541C12E3160031B6CF /* LoginView.swift in Sources */,
 				259EB8391C6EF3CF002A3ED9 /* UserDetailInfoViewCell.swift in Sources */,
-				25FF51361C799E3B009C1649 /* SearchTableViewCell.swift in Sources */,
+				25FF51361C799E3B009C1649 /* NothingSearchResultTableViewCell.swift in Sources */,
 				2524D59D1C5DDCE700703B27 /* UIView+BorderForIB.swift in Sources */,
 				259EB8371C6EF195002A3ED9 /* UserDetailView.swift in Sources */,
 				25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */,
