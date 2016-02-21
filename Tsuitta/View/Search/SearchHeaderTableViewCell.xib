@@ -2,15 +2,117 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchHeaderTableViewCell" customModule="Tsuitta" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-        </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="132" id="ehv-Dd-Gxl" customClass="SearchHeaderTableViewCell" customModule="Tsuitta" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="132"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" tableViewCell="ehv-Dd-Gxl" id="xnN-DX-nLR">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="131.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="sRy-8X-t1t">
+                        <rect key="frame" x="18" y="18" width="298" height="95.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KTU-B4-7D3">
+                                <rect key="frame" x="0.0" y="65" width="298" height="30.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wot-Yw-GEf">
+                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="30.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="ツイート">
+                                            <color key="titleColor" red="0.99765560090000005" green="1" blue="0.99681869879999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapTweetButton:" destination="ehv-Dd-Gxl" eventType="touchUpInside" id="vut-lk-JWk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlH-W7-2BQ">
+                                        <rect key="frame" x="102.5" y="0.0" width="93" height="30.5"/>
+                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <state key="normal" title="ユーザー">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapUserButton:" destination="ehv-Dd-Gxl" eventType="touchUpInside" id="FPA-K2-QKV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcB-jX-eKC">
+                                        <rect key="frame" x="205.5" y="0.0" width="92.5" height="30.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <state key="normal" title="画像">
+                                            <color key="titleColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapImageButton:" destination="ehv-Dd-Gxl" eventType="touchUpInside" id="FdK-YA-kSj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="line" placeholder="検索キーワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Jb-iW-xjV">
+                                <rect key="frame" x="0.0" y="0.0" width="298" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="1aU-H4-sox"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KTU-B4-7D3" secondAttribute="bottom" id="Ep2-GM-8N9"/>
+                            <constraint firstAttribute="trailing" secondItem="9Jb-iW-xjV" secondAttribute="trailing" id="Hfy-FF-pgT"/>
+                            <constraint firstAttribute="trailing" secondItem="KTU-B4-7D3" secondAttribute="trailing" id="WEw-4C-8eM"/>
+                            <constraint firstItem="KTU-B4-7D3" firstAttribute="top" secondItem="9Jb-iW-xjV" secondAttribute="bottom" constant="20" id="bWQ-AT-cP6"/>
+                            <constraint firstItem="9Jb-iW-xjV" firstAttribute="leading" secondItem="sRy-8X-t1t" secondAttribute="leading" id="h3g-re-epI"/>
+                            <constraint firstItem="KTU-B4-7D3" firstAttribute="leading" secondItem="sRy-8X-t1t" secondAttribute="leading" id="mFm-sq-MGu"/>
+                            <constraint firstItem="9Jb-iW-xjV" firstAttribute="top" secondItem="sRy-8X-t1t" secondAttribute="top" id="pF0-A5-tJs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="sRy-8X-t1t" secondAttribute="trailing" constant="10" id="1Nr-6Q-sgh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="sRy-8X-t1t" secondAttribute="bottom" constant="10" id="JlG-h4-tFK"/>
+                    <constraint firstItem="sRy-8X-t1t" firstAttribute="leading" secondItem="xnN-DX-nLR" secondAttribute="leadingMargin" constant="10" id="Mmg-S2-rTZ"/>
+                    <constraint firstItem="sRy-8X-t1t" firstAttribute="top" secondItem="xnN-DX-nLR" secondAttribute="topMargin" constant="10" id="nnR-uQ-ZnC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageButton" destination="FcB-jX-eKC" id="RrA-VV-kuf"/>
+                <outlet property="searchTextField" destination="9Jb-iW-xjV" id="t28-TK-0Lx"/>
+                <outlet property="tweetButton" destination="wot-Yw-GEf" id="Dzo-zg-wIE"/>
+                <outlet property="userButton" destination="RlH-W7-2BQ" id="BMn-mZ-6Ez"/>
+            </connections>
+            <point key="canvasLocation" x="120" y="115"/>
+        </tableViewCell>
     </objects>
 </document>
