@@ -69,6 +69,8 @@
 		25FF51321C799D7C009C1649 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51311C799D7C009C1649 /* SearchViewController.swift */; };
 		25FF51341C799E24009C1649 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51331C799E24009C1649 /* SearchView.swift */; };
 		25FF51361C799E3B009C1649 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */; };
+		25FF51381C799E95009C1649 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FF51371C799E95009C1649 /* SearchView.xib */; };
+		25FF513A1C799EA6009C1649 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FF51391C799EA6009C1649 /* SearchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,8 @@
 		25FF51311C799D7C009C1649 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		25FF51331C799E24009C1649 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		25FF51371C799E95009C1649 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		25FF51391C799EA6009C1649 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -489,7 +493,9 @@
 			isa = PBXGroup;
 			children = (
 				25FF51331C799E24009C1649 /* SearchView.swift */,
+				25FF51371C799E95009C1649 /* SearchView.xib */,
 				25FF51351C799E3B009C1649 /* SearchTableViewCell.swift */,
+				25FF51391C799EA6009C1649 /* SearchTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -693,12 +699,14 @@
 				2524D59B1C5DD4B500703B27 /* TweetComposeView.xib in Resources */,
 				0652FC711C1D5856005006D3 /* HomeView.xib in Resources */,
 				259EB83D1C6EF3F5002A3ED9 /* UserDetailInfoViewCell.xib in Resources */,
+				25FF51381C799E95009C1649 /* SearchView.xib in Resources */,
 				259EB83F1C6EF408002A3ED9 /* UserDetailActionViewCell.xib in Resources */,
 				0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */,
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
 				25590FCF1C4258FC0024CEC3 /* sample.jpg in Resources */,
 				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
 				259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */,
+				25FF513A1C799EA6009C1649 /* SearchTableViewCell.xib in Resources */,
 				253D5E871C148E6600D59DC0 /* icon.jpg in Resources */,
 				257559561C12E3250031B6CF /* LoginView.xib in Resources */,
 				259EB8351C6EF189002A3ED9 /* UserDetailView.xib in Resources */,
