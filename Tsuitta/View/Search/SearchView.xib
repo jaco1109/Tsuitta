@@ -6,10 +6,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchView" customModule="Tsuitta" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dZU-rL-1xR">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dZU-rL-1xR" secondAttribute="trailing" id="4UA-4D-JJS"/>
+                <constraint firstAttribute="bottom" secondItem="dZU-rL-1xR" secondAttribute="bottom" id="Ldm-Om-UIq"/>
+                <constraint firstItem="dZU-rL-1xR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NvG-1q-hNj"/>
+                <constraint firstItem="dZU-rL-1xR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kTN-vJ-R7v"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="tableView" destination="dZU-rL-1xR" id="hU0-gz-dyA"/>
+                <outletCollection property="gestureRecognizers" destination="mrE-T5-H4T" appends="YES" id="OQf-xz-8oh"/>
+            </connections>
         </view>
+        <tapGestureRecognizer id="mrE-T5-H4T">
+            <connections>
+                <action selector="didTapGesture:" destination="iN0-l3-epB" id="FSS-Ym-rDX"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
