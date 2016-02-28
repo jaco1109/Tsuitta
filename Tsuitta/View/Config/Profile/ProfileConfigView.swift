@@ -57,6 +57,10 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    @IBAction func didTapScreen(sender: UITapGestureRecognizer) {
+        self.endEditing(true)
+    }
+    
     func setup(data : ProfileDetailData) {
         self.profileData = data
         self.tableView.reloadData()

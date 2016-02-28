@@ -16,6 +16,7 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="DZ2-B1-sVD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cae-Yo-7Yn"/>
                 <constraint firstItem="DZ2-B1-sVD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gQr-EQ-mLR"/>
@@ -25,7 +26,13 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="tableView" destination="DZ2-B1-sVD" id="Gky-6o-f3e"/>
+                <outletCollection property="gestureRecognizers" destination="xau-rO-4Wr" appends="YES" id="rAC-Ou-s2d"/>
             </connections>
         </view>
+        <tapGestureRecognizer id="xau-rO-4Wr">
+            <connections>
+                <action selector="didTapScreen:" destination="iN0-l3-epB" id="kOl-j9-Rl3"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
