@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import TwitterKit
+import WebImage
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -67,23 +68,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TweetTableViewCell
         let tweet = tweets[indexPath.row]
-        cell.userId.text = tweet.author.name
-        cell.userName.text = "@" + tweet.author.screenName
-        cell.created.text = self.convertDateToString(tweet.createdAt)
-        cell.tweetText.text = tweet.text
+        cell.configure(tweet)
         
         return cell
-    }
-    
-    // MARK: NSDate型の日付を文字列型に変換する
-    // TODO: 「◯◯前」みたいに経過時間を返すようにする
-    private func convertDateToString(date: NSDate) -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
-        dateFormatter.dateFormat = "yyyy/MM/dd"
-        let dateString: String = dateFormatter.stringFromDate(date)
-        
-        return dateString
     }
     
 }
