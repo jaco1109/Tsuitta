@@ -43,7 +43,7 @@ enum ProfileConfigItem: Int {
     }
 }
 
-class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
+class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     private let cellIdentifier = "Cell"
     
@@ -129,6 +129,11 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    //MARK: TextField
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         
+        return true
     }
 }
