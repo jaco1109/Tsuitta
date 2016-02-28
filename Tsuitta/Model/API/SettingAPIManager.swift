@@ -53,7 +53,17 @@ class SettingAPIManager {
     
     func backgroundImage(image: UIImage = UIImage(named: "sample")!){
         let imageFile = UIImageJPEGRepresentation(image, 0.5)!
-        APIClient.post("/account/update_profile_background_image.json", parameter: ["name": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
+        APIClient.post("/account/update_profile_background_image.json", parameter: ["image": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+        }
+    }
+    
+    func bannerImage(image: UIImage = UIImage(named: "sample")!){
+        let imageFile = UIImageJPEGRepresentation(image, 0.5)!
+        APIClient.post("/account/update_profile_banner.json", parameter: ["banner": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
             if let err = error {
                 debug("エラーだよ：\(err.debugDescription)")
                 return
