@@ -14,6 +14,17 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    //MARK: CreateCell
+    
+    private func createProfileImageSettingCell(icon: UIImage, banner: UIImage) -> ProfileImageConfigTableViewCell {
+        let cell = ProfileImageConfigTableViewCell()
+        
+        cell.iconImageView.image = icon
+        cell.iconImageView.image = banner
+        
+        return cell
+    }
+    
     //MARK: TableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
