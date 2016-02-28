@@ -1,10 +1,13 @@
 import TwitterKit
+import SwiftyJSON
 
 class UserAPIManager {
     
     private let twitter = Twitter.sharedInstance()
     
     private let client = TWTRAPIClient()
+    
+    //MARK: userData
     
     func id() -> String? {
         if let userID = twitter.sessionStore.session()?.userID {
@@ -55,6 +58,170 @@ class UserAPIManager {
         
         client.loadUserWithID(userID) { (user, error) -> Void in
             callback(user, error)
+        }
+    }
+    
+    //TODO:とりあえず適当に作ります。あとで修正してね！
+    func profileDetailData(userId: Int, callback: ProfileDetailData -> Void) {
+        let id = String(userId)
+        APIClient.get("/users/show.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.description)")
+                return
+            }
+            let profile = ProfileDetailData(json: JSON(data: data!))
+            callback(profile)
+        }
+    }
+    
+    //MARK: Follow
+    
+    func follow(userId: Int){
+        let id = String(userId)
+        APIClient.post("/friendships/create.json", parameter: ["user_id": id, "follow": "true"]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+            
+        }
+    }
+    
+    func remove(userId: Int){
+        let id = String(userId)
+        APIClient.post("/friendships/destroy.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    func followList(callback: ([TWTRCoreUser]) -> Void){
+        APIClient.post("/friends/list.json", parameter: ["user_id": id()!]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
+                let usersData = TWTRUser.usersWithJSONArray(jsonArray) as! [TWTRUser]
+                let coreUsersData = usersData.map{TWTRCoreUser(userData: $0)}
+                
+                callback(coreUsersData)
+            }
+        }
+    }
+    
+    func followerList(callback: ([TWTRCoreUser]) -> Void){
+        //TODO: とりあえず自分のを取得するようにしてます
+        APIClient.post("/followers/list.json", parameter: ["user_id": id()!]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
+                let usersData = TWTRUser.usersWithJSONArray(jsonArray) as! [TWTRUser]
+                let coreUsersData = usersData.map{TWTRCoreUser(userData: $0)}
+                
+                callback(coreUsersData)
+            }
+        }
+    }
+    
+    //MARK: Mute
+    
+    func mute(userId: Int){
+        let id = String(userId)
+        APIClient.post("/mutes/users/create.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+        }
+    }
+    
+    func undoMute(userId: Int){
+        let id = String(userId)
+        APIClient.post("/mutes/users/destroy.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+        }
+    }
+    
+    func muteList(callback: ([TWTRCoreUser]) -> Void){
+        APIClient.get("/mutes/users/list.json") { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
+                let usersData = TWTRUser.usersWithJSONArray(jsonArray) as! [TWTRUser]
+                let coreUsersData = usersData.map{TWTRCoreUser(userData: $0)}
+                
+                callback(coreUsersData)
+            }
+        }
+    }
+    
+    //MARK: Block
+    
+    func block(blockId: Int){
+        let id = String(blockId)
+        APIClient.post("/blocks/create.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+        }
+    }
+    
+    func undoBlock(blockId: Int){
+        let id = String(blockId)
+        APIClient.post("/blocks/create.json", parameter: ["user_id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+        }
+    }
+    
+    func blockList(callback: ([TWTRCoreUser]) -> Void){
+        APIClient.get("/mutes/users/list.json") { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
+                let usersData = TWTRUser.usersWithJSONArray(jsonArray) as! [TWTRUser]
+                let coreUsersData = usersData.map{TWTRCoreUser(userData: $0)}
+                
+                callback(coreUsersData)
+            }
+        }
+    }
+    
+    //MARK: Related
+    
+    //TODO: とりあえずテスト用に作成しました。いらなくなったら削除するかも。
+    func related(sourceId: Int, targetId: Int){
+        //let sId = String(sourceId)
+        let tId = String(targetId)
+        APIClient.get("/friendships/show.json", parameter: ["source_id": id()! , "target_id": tId]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+            let json = JSON(data: data!)
+            let follow = json["relationship"]["source"]["following"].boolValue
+            let mute = json["relationship"]["source"]["muting"].boolValue
+            
+            debug("follow:\(follow) mute:\(mute)")
         }
     }
 

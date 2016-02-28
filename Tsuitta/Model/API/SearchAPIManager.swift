@@ -8,7 +8,7 @@ class SearchAPIManager {
     func users(searchWord: String, callback: ([TWTRUser]) -> Void){
         APIClient.get("/users/search.json", parameter: ["q": searchWord, "count": "25"]) { (response, data, error) -> Void in
             if let err = error {
-                print("エラーだよ：\(err.code)")
+                debug("エラーだよ：\(err.code)")
                 return
             }
             if let d = data {
@@ -23,7 +23,7 @@ class SearchAPIManager {
     func tweets(searchWord: String, callback: ([TWTRTweet]) -> Void){
         APIClient.get("/search/tweets.json", parameter: ["q": "#" + searchWord, "count": "25"]) { (response, data, error) -> Void in
             if let err = error {
-                print("エラーだよ：\(err.code)")
+                debug("エラーだよ：\(err.code)")
                 return
             }
             if let d = data {
@@ -38,7 +38,7 @@ class SearchAPIManager {
     func images(searchWord: String, callback: ([TWTRTweet]) -> Void){
         APIClient.get("/search/tweets.json", parameter: ["q": "#" + searchWord + " filter:images", "count": "25", "include_entities": "true"]) { (response, data, error) -> Void in
             if let err = error {
-                print("エラーだよ：\(err.code)")
+                debug("エラーだよ：\(err.code)")
                 return
             }
             if let d = data {

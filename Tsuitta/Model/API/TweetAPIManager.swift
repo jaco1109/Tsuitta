@@ -1,15 +1,18 @@
 import TwitterKit
+import SwiftyJSON
 
 class TweetAPIManager {
     
     private let client = TWTRAPIClient()
+    
+    //MARK: Get Tweet
     
     func single(tweetID: String, callback: (TWTRTweet) -> Void){
         client.loadTweetWithID(tweetID) { tweet, error in
             if let t = tweet {
                 callback(t)
             } else {
-                print("Failed to load Tweet: \(error?.localizedDescription)")
+                debug("Failed to load Tweet: \(error?.localizedDescription)")
             }
         }
     }
@@ -20,7 +23,7 @@ class TweetAPIManager {
         //それ以外のデータに関しては今後取れるように修正します。
         APIClient.get("/statuses/home_timeline.json", parameter: ["count": "20"]) { (response, data, error) -> Void in
             if let err = error {
-                print("エラーだよ：\(err.code)")
+                debug("エラーだよ：\(err.code)")
                 return
             }
             var json: AnyObject?
@@ -43,7 +46,7 @@ class TweetAPIManager {
         }
         APIClient.get("/statuses/user_timeline.json", parameter: ["user_id": userID, "count": "25"]) { (response, data, error) -> Void in
             if let err = error {
-                print("エラーだよ：\(err.code)")
+                debug("エラーだよ：\(err.code)")
                 return
             }
             var json: AnyObject?
@@ -53,6 +56,64 @@ class TweetAPIManager {
                 return
             }
             if let jsonArray = json as? [AnyObject] {
+                let tweets = TWTRTweet.tweetsWithJSONArray(jsonArray) as! [TWTRTweet]
+                callback(tweets)
+            }
+        }
+    }
+    
+    //MARK: Compose Tweet
+    
+    func compose(text: String){
+        APIClient.post("/statuses/update.json", parameter: ["status": text]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    func retweet(id: Int){
+        let tweetId = String(id)
+        APIClient.post("/statuses/retweet/" + tweetId + ".json") { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    //MARK: Like
+    
+    func like(likeId: Int){
+        let id = String(likeId)
+        APIClient.post("/favorites/create.json", parameter: ["id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    func undoLike(likeId: Int){
+        let id = String(likeId)
+        APIClient.post("/favorites/destroy.json", parameter: ["id": id]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.code)")
+                return
+            }
+        }
+    }
+    
+    func likeList(callback: ([TWTRTweet]) -> Void){
+        //TODO: とりあえず自分のお気にリスト取得します
+        APIClient.get("/favorites/list.json", parameter: ["user_id": APILocator.sharedInstance.user.id()! ]) { (response, data, error) -> Void in
+            if let err = error {
+                debug("エラーだよ：\(err.debugDescription)")
+                return
+            }
+            let json = JSON(data: data!).arrayObject
+            if let jsonArray = json {
                 let tweets = TWTRTweet.tweetsWithJSONArray(jsonArray) as! [TWTRTweet]
                 callback(tweets)
             }
