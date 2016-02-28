@@ -55,6 +55,11 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func setup(data : ProfileDetailData) {
+        self.profileData = data
+        self.tableView.reloadData()
+    }
+    
     //MARK: CreateCell
     
     private func createProfileImageSettingCell(icon: UIImage, banner: UIImage) -> ProfileImageConfigTableViewCell {
