@@ -7,15 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		064DA76C1C82EDF900456A72 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064DA76A1C82EDF900456A72 /* Alamofire.framework */; };
-		064DA76D1C82EDF900456A72 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 064DA76A1C82EDF900456A72 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		064DA76E1C82EDF900456A72 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064DA76B1C82EDF900456A72 /* SwiftyJSON.framework */; };
-		064DA76F1C82EDF900456A72 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 064DA76B1C82EDF900456A72 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0651CBB81C82F05200964912 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* TweetTableViewCell.swift */; };
 		0651CBB91C82F0B100964912 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC701C1D5856005006D3 /* TweetTableViewCell.xib */; };
-		0651CBBA1C82F15200964912 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
-		0651CBBB1C82F16500964912 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; };
-		0651CBBD1C82F18200964912 /* PagingMenuController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0651CBBC1C82F18200964912 /* PagingMenuController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0652FC661C1D4F69005006D3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC651C1D4F69005006D3 /* TabBar.storyboard */; };
 		0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC6C1C1D5692005006D3 /* HomeViewController.swift */; };
 		0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC771C1D77F2005006D3 /* ConstantColor.swift */; };
@@ -35,12 +27,21 @@
 		253D5E871C148E6600D59DC0 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 253D5E861C148E6600D59DC0 /* icon.jpg */; };
 		25590F991C391D660024CEC3 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F981C391D660024CEC3 /* TimeLineViewController.swift */; };
 		25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F9C1C40F07B0024CEC3 /* APILocator.swift */; };
-		25590F9F1C4103650024CEC3 /* UserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590F9E1C4103650024CEC3 /* UserAPIManager.swift */; };
 		25590FA11C4103930024CEC3 /* TweetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590FA01C4103930024CEC3 /* TweetAPIManager.swift */; };
 		25590FA31C4103D10024CEC3 /* SearchAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590FA21C4103D10024CEC3 /* SearchAPIManager.swift */; };
 		25590FA51C4103F10024CEC3 /* AuthAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590FA41C4103F10024CEC3 /* AuthAPIManager.swift */; };
 		25590FCD1C424D7F0024CEC3 /* SettingAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25590FCC1C424D7F0024CEC3 /* SettingAPIManager.swift */; };
 		25590FCF1C4258FC0024CEC3 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25590FCE1C4258FC0024CEC3 /* sample.jpg */; };
+		25672D3A1C830B45002F3A69 /* UserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25672D391C830B45002F3A69 /* UserAPIManager.swift */; };
+		25672D3B1C830BCF002F3A69 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* TweetTableViewCell.swift */; };
+		25672D3C1C830C03002F3A69 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; };
+		25672D3D1C830C03002F3A69 /* PagingMenuController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25672D3E1C830C15002F3A69 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
+		25672D3F1C830C15002F3A69 /* TwitterCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25672D421C830C2D002F3A69 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25672D401C830C2D002F3A69 /* Alamofire.framework */; };
+		25672D431C830C2D002F3A69 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25672D401C830C2D002F3A69 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25672D441C830C2D002F3A69 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25672D411C830C2D002F3A69 /* SwiftyJSON.framework */; };
+		25672D451C830C2D002F3A69 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25672D411C830C2D002F3A69 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559481C12C2D30031B6CF /* Fabric.framework */; };
 		2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257559491C12C2D30031B6CF /* TwitterKit.framework */; };
 		2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */; };
@@ -99,10 +100,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0651CBBD1C82F18200964912 /* PagingMenuController.framework in Embed Frameworks */,
 				259EB8421C6F05C0002A3ED9 /* WebImage.framework in Embed Frameworks */,
-				064DA76D1C82EDF900456A72 /* Alamofire.framework in Embed Frameworks */,
-				064DA76F1C82EDF900456A72 /* SwiftyJSON.framework in Embed Frameworks */,
+				25672D3F1C830C15002F3A69 /* TwitterCore.framework in Embed Frameworks */,
+				25672D3D1C830C03002F3A69 /* PagingMenuController.framework in Embed Frameworks */,
+				25672D431C830C2D002F3A69 /* Alamofire.framework in Embed Frameworks */,
+				25672D451C830C2D002F3A69 /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,9 +112,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		064DA76A1C82EDF900456A72 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		064DA76B1C82EDF900456A72 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		0651CBBC1C82F18200964912 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
 		0652FC651C1D4F69005006D3 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0652FC671C1D5133005006D3 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
 		0652FC6C1C1D5692005006D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -136,12 +135,14 @@
 		253D5E861C148E6600D59DC0 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 		25590F981C391D660024CEC3 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		25590F9C1C40F07B0024CEC3 /* APILocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILocator.swift; sourceTree = "<group>"; };
-		25590F9E1C4103650024CEC3 /* UserAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
 		25590FA01C4103930024CEC3 /* TweetAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetAPIManager.swift; sourceTree = "<group>"; };
 		25590FA21C4103D10024CEC3 /* SearchAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPIManager.swift; sourceTree = "<group>"; };
 		25590FA41C4103F10024CEC3 /* AuthAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPIManager.swift; sourceTree = "<group>"; };
 		25590FCC1C424D7F0024CEC3 /* SettingAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAPIManager.swift; sourceTree = "<group>"; };
 		25590FCE1C4258FC0024CEC3 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
+		25672D391C830B45002F3A69 /* UserAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
+		25672D401C830C2D002F3A69 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		25672D411C830C2D002F3A69 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		257559481C12C2D30031B6CF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		257559491C12C2D30031B6CF /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		2575594A1C12C2D30031B6CF /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -187,13 +188,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0651CBBB1C82F16500964912 /* PagingMenuController.framework in Frameworks */,
-				0651CBBA1C82F15200964912 /* TwitterCore.framework in Frameworks */,
+				25672D3E1C830C15002F3A69 /* TwitterCore.framework in Frameworks */,
+				25672D421C830C2D002F3A69 /* Alamofire.framework in Frameworks */,
 				259EB8411C6F05C0002A3ED9 /* WebImage.framework in Frameworks */,
+				25672D3C1C830C03002F3A69 /* PagingMenuController.framework in Frameworks */,
+				25672D441C830C2D002F3A69 /* SwiftyJSON.framework in Frameworks */,
 				2575594C1C12C2D30031B6CF /* Fabric.framework in Frameworks */,
 				2575594D1C12C2D30031B6CF /* TwitterKit.framework in Frameworks */,
-				064DA76C1C82EDF900456A72 /* Alamofire.framework in Frameworks */,
-				064DA76E1C82EDF900456A72 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +264,8 @@
 		259DD32A1C00429A00C9B7CE = {
 			isa = PBXGroup;
 			children = (
-				0651CBBC1C82F18200964912 /* PagingMenuController.framework */,
-				064DA76A1C82EDF900456A72 /* Alamofire.framework */,
-				064DA76B1C82EDF900456A72 /* SwiftyJSON.framework */,
+				25672D401C830C2D002F3A69 /* Alamofire.framework */,
+				25672D411C830C2D002F3A69 /* SwiftyJSON.framework */,
 				259EB8401C6F05C0002A3ED9 /* WebImage.framework */,
 				259DD3921C00530C00C9B7CE /* Framework */,
 				259DD3341C00429A00C9B7CE /* Products */,
@@ -457,10 +457,10 @@
 		259DD37E1C004D4300C9B7CE /* API */ = {
 			isa = PBXGroup;
 			children = (
+				25672D391C830B45002F3A69 /* UserAPIManager.swift */,
 				25590FA41C4103F10024CEC3 /* AuthAPIManager.swift */,
 				25590FA21C4103D10024CEC3 /* SearchAPIManager.swift */,
 				25590FA01C4103930024CEC3 /* TweetAPIManager.swift */,
-				25590F9E1C4103650024CEC3 /* UserAPIManager.swift */,
 				25590FCC1C424D7F0024CEC3 /* SettingAPIManager.swift */,
 				25590F9C1C40F07B0024CEC3 /* APILocator.swift */,
 				25D441DC1C2527F600C84D58 /* APIClient.swift */,
@@ -753,7 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0651CBB81C82F05200964912 /* TweetTableViewCell.swift in Sources */,
+				25672D3B1C830BCF002F3A69 /* TweetTableViewCell.swift in Sources */,
 				2524D5991C5DD48B00703B27 /* TweetComposeView.swift in Sources */,
 				0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */,
 				0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */,
@@ -775,12 +775,12 @@
 				25D441DD1C2527F600C84D58 /* APIClient.swift in Sources */,
 				0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */,
 				2524D5861C54D2E600703B27 /* TweetDetailViewController.swift in Sources */,
-				25590F9F1C4103650024CEC3 /* UserAPIManager.swift in Sources */,
 				2524D58E1C54D66700703B27 /* MainTweetDetailTableViewCell.swift in Sources */,
 				2524D5901C55027900703B27 /* MainTweetView.swift in Sources */,
 				25590FA51C4103F10024CEC3 /* AuthAPIManager.swift in Sources */,
 				25590FA11C4103930024CEC3 /* TweetAPIManager.swift in Sources */,
 				25590FCD1C424D7F0024CEC3 /* SettingAPIManager.swift in Sources */,
+				25672D3A1C830B45002F3A69 /* UserAPIManager.swift in Sources */,
 				25FF513E1C799F2D009C1649 /* SearchHeaderTableViewCell.swift in Sources */,
 				2524D5881C54D36200703B27 /* TweetDetailView.swift in Sources */,
 				25FF51341C799E24009C1649 /* SearchView.swift in Sources */,
