@@ -78,6 +78,18 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
         cell.iconImageView.sd_setImageWithURL(iconImageURL)
         cell.bannerImageView.sd_setImageWithURL(bannerImageURL)
         
+    private func createProfileTextConfigCell(title: String, defaultVal: String) -> ProfileTextConfigTableViewCell {
+        guard let cell = UINib(nibName: "ProfileTextConfigTableViewCell", bundle: nil).instantiateWithOwner(self, options: nil).first as? ProfileTextConfigTableViewCell else{
+            return ProfileTextConfigTableViewCell()
+        }
+        
+        cell.titleLabel.text = title
+        cell.textField.text = defaultVal
+        cell.textField.delegate = self
+        
+        return cell
+    }
+    
         
         
         return cell
