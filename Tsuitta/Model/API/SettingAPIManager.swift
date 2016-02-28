@@ -28,45 +28,49 @@ struct Account{
 
 class SettingAPIManager {
     
-    func profile(account: Account){
-        guard let dic = account.getDic() where dic.count != 0 else {
-            return
-        }
-        APIClient.post("/account/update_profile.json", parameter: dic) { (response, data, error) -> Void in
-            if let err = error {
-                debug("エラーだよ：\(err.debugDescription)")
+    let account = AccountAPIManager()
+    
+    class AccountAPIManager {
+        func profile(account: Account){
+            guard let dic = account.getDic() where dic.count != 0 else {
                 return
             }
-        }
-    }
-    
-    func iconImage(image: UIImage = UIImage(named: "sample.jpg")!){
-        //TODO: 引数の0.5は適当です。
-        let imageFile = UIImageJPEGRepresentation(image, 0.5)!
-        APIClient.post("/account/update_profile_image.json", parameter: ["image": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
-            if let err = error {
-                debug("エラーだよ：\(err.debugDescription)")
-                return
+            APIClient.post("/account/update_profile.json", parameter: dic) { (response, data, error) -> Void in
+                if let err = error {
+                    debug("エラーだよ：\(err.debugDescription)")
+                    return
+                }
             }
         }
-    }
-    
-    func backgroundImage(image: UIImage = UIImage(named: "sample")!){
-        let imageFile = UIImageJPEGRepresentation(image, 0.5)!
-        APIClient.post("/account/update_profile_background_image.json", parameter: ["image": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
-            if let err = error {
-                debug("エラーだよ：\(err.debugDescription)")
-                return
+        
+        func iconImage(image: UIImage = UIImage(named: "sample.jpg")!){
+            //TODO: 引数の0.5は適当です。
+            let imageFile = UIImageJPEGRepresentation(image, 0.5)!
+            APIClient.post("/account/update_profile_image.json", parameter: ["image": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
+                if let err = error {
+                    debug("エラーだよ：\(err.debugDescription)")
+                    return
+                }
             }
         }
-    }
-    
-    func bannerImage(image: UIImage = UIImage(named: "sample")!){
-        let imageFile = UIImageJPEGRepresentation(image, 0.5)!
-        APIClient.post("/account/update_profile_banner.json", parameter: ["banner": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
-            if let err = error {
-                debug("エラーだよ：\(err.debugDescription)")
-                return
+        
+        func backgroundImage(image: UIImage = UIImage(named: "sample")!){
+            let imageFile = UIImageJPEGRepresentation(image, 0.5)!
+            APIClient.post("/account/update_profile_background_image.json", parameter: ["image": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
+                if let err = error {
+                    debug("エラーだよ：\(err.debugDescription)")
+                    return
+                }
+            }
+        }
+        
+        func bannerImage(image: UIImage = UIImage(named: "sample")!){
+            let imageFile = UIImageJPEGRepresentation(image, 0.5)!
+            APIClient.post("/account/update_profile_banner.json", parameter: ["banner": imageFile.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)]) { (response, data, error) -> Void in
+                if let err = error {
+                    debug("エラーだよ：\(err.debugDescription)")
+                    return
+                }
             }
         }
     }
