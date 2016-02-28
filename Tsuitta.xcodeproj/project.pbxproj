@@ -255,8 +255,8 @@
 			children = (
 				25672D291C82BD04002F3A69 /* ProfileConfigView.swift */,
 				25672D2A1C82BD04002F3A69 /* ProfileConfigView.xib */,
-				25672D2D1C82BE29002F3A69 /* ProfileImageConfigTableViewCell.xib */,
 				25672D2F1C82BE36002F3A69 /* ProfileImageConfigTableViewCell.swift */,
+				25672D2D1C82BE29002F3A69 /* ProfileImageConfigTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
