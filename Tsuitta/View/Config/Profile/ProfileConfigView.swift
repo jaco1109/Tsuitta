@@ -110,9 +110,25 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        guard let data = self.profileData else{
+            return UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
+        }
         
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
-        cell.textLabel?.text =
+        let type = ProfileConfigItem.init(rawValue: indexPath.row)!
+        
+        var cell: UITableViewCell
+        switch type {
+        case .Image:
+            cell = self.createProfileImageConfigCell(NSURL(string: data.profileImageURL)!, bannerImageURL: NSURL(string: data.profileBannerURL)!)
+        case .Description:
+            cell = self.createProfileDescriptionConfigCell(type.defaultValue(data))
+        default:
+            cell = self.createProfileTextConfigCell(type.title(), defaultVal: type.defaultValue(data))
+        }
+
+        return cell
+    }
+    
         
     }
 }
