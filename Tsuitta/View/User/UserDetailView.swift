@@ -1,7 +1,7 @@
 import UIKit
 import TwitterKit
 
-class UserDetailView: UIView, UITableViewDelegate, UITableViewDataSource  {
+class UserDetailView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     private var profileData: ProfileDetailData?
     
