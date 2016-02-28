@@ -243,6 +243,15 @@
 			path = Compose;
 			sourceTree = "<group>";
 		};
+		2524D5971C5DD48000703B27 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				2524D5981C5DD48B00703B27 /* TweetComposeView.swift */,
+				2524D59A1C5DD4B500703B27 /* TweetComposeView.xib */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
 		253D5E851C148E5600D59DC0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
