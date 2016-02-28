@@ -45,6 +45,8 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     private let cellIdentifier = "Cell"
     
+    private var profileData: ProfileDetailData?
+    
     @IBOutlet weak private var tableView: UITableView! {
         didSet{
             self.tableView.delegate = self
