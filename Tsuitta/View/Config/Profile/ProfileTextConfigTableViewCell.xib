@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="Nje-0O-zi2" customClass="ProfileTextConfigTableViewCell" customModule="Tsuitta" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="111" id="Nje-0O-zi2" customClass="ProfileTextConfigTableViewCell" customModule="Tsuitta" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="406" height="111"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nje-0O-zi2" id="mFZ-Ns-tVd">
@@ -47,6 +47,10 @@
                     <constraint firstItem="oGG-gD-R01" firstAttribute="leading" secondItem="mFZ-Ns-tVd" secondAttribute="leading" id="riA-HP-jLK"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="textField" destination="fbz-lg-8Wo" id="QpW-3g-Ai2"/>
+                <outlet property="titleLabel" destination="M10-of-nNv" id="zQt-UJ-7M0"/>
+            </connections>
             <point key="canvasLocation" x="264" y="-18.5"/>
         </tableViewCell>
     </objects>
