@@ -1,4 +1,6 @@
 import UIKit
+import WebImage
+
 enum ProfileConfigItem: Int {
     case Image = 0
     case Name
@@ -68,11 +70,15 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: CreateCell
     
-    private func createProfileImageSettingCell(icon: UIImage, banner: UIImage) -> ProfileImageConfigTableViewCell {
-        let cell = ProfileImageConfigTableViewCell()
+    private func createProfileImageConfigCell(iconImageURL: NSURL, bannerImageURL: NSURL) -> ProfileImageConfigTableViewCell {
+        guard let cell = UINib(nibName: "ProfileImageConfigTableViewCell", bundle: nil).instantiateWithOwner(self, options: nil).first as? ProfileImageConfigTableViewCell else{
+            return ProfileImageConfigTableViewCell()
+        }
         
-        cell.iconImageView.image = icon
-        cell.iconImageView.image = banner
+        cell.iconImageView.sd_setImageWithURL(iconImageURL)
+        cell.bannerImageView.sd_setImageWithURL(bannerImageURL)
+        
+        
         
         return cell
     }
