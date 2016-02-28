@@ -80,7 +80,7 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
     //MARK: TableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return ProfileConfigItem.count()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
