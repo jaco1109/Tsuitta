@@ -78,6 +78,9 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
         cell.iconImageView.sd_setImageWithURL(iconImageURL)
         cell.bannerImageView.sd_setImageWithURL(bannerImageURL)
         
+        return cell
+    }
+    
     private func createProfileTextConfigCell(title: String, defaultVal: String) -> ProfileTextConfigTableViewCell {
         guard let cell = UINib(nibName: "ProfileTextConfigTableViewCell", bundle: nil).instantiateWithOwner(self, options: nil).first as? ProfileTextConfigTableViewCell else{
             return ProfileTextConfigTableViewCell()
@@ -90,7 +93,12 @@ class ProfileConfigView: UIView, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    private func createProfileDescriptionConfigCell(defaultVal: String) -> ProfileDescriptionConfigTableViewCell {
+        guard let cell = UINib(nibName: "ProfileDescriptionConfigTableViewCell", bundle: nil).instantiateWithOwner(self, options: nil).first as? ProfileDescriptionConfigTableViewCell else{
+            return ProfileDescriptionConfigTableViewCell()
+        }
         
+        cell.textView.text = defaultVal
         
         return cell
     }
