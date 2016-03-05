@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="180" id="Dw8-ZI-Hrz" customClass="ProfileImageConfigTableViewCell" customModule="Tsuitta" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" tableViewCell="Dw8-ZI-Hrz" id="hRU-V7-Vzl">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="179.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnj-OJ-38Z" userLabel="BannerView">
+                        <rect key="frame" x="0.0" y="8" width="382" height="90"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mGY-Ed-IDC">
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mGY-Ed-IDC" secondAttribute="height" multiplier="2:1" id="kuZ-1w-amz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kuZ-1w-amz"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="0j2-1T-sdn"/>
+                            <constraint firstAttribute="trailing" secondItem="mGY-Ed-IDC" secondAttribute="trailing" id="1X3-9T-b9k"/>
+                            <constraint firstAttribute="bottom" secondItem="mGY-Ed-IDC" secondAttribute="bottom" id="6dv-5h-I0S"/>
+                            <constraint firstItem="mGY-Ed-IDC" firstAttribute="top" secondItem="Hnj-OJ-38Z" secondAttribute="top" id="7mc-Ev-f0v"/>
+                            <constraint firstItem="mGY-Ed-IDC" firstAttribute="centerX" secondItem="Hnj-OJ-38Z" secondAttribute="centerX" id="GZD-On-Rez"/>
+                            <constraint firstAttribute="trailing" secondItem="mGY-Ed-IDC" secondAttribute="trailing" id="QJ8-y0-e0C"/>
+                            <constraint firstAttribute="height" constant="90" id="UaO-RP-lii"/>
+                            <constraint firstItem="mGY-Ed-IDC" firstAttribute="leading" secondItem="Hnj-OJ-38Z" secondAttribute="leading" id="a9J-c1-fI7"/>
+                            <constraint firstItem="mGY-Ed-IDC" firstAttribute="centerY" secondItem="Hnj-OJ-38Z" secondAttribute="centerY" id="jli-gf-i4E"/>
+                            <constraint firstItem="mGY-Ed-IDC" firstAttribute="leading" secondItem="Hnj-OJ-38Z" secondAttribute="leading" id="mGk-oL-cPB"/>
+                            <constraint firstAttribute="trailing" secondItem="mGY-Ed-IDC" secondAttribute="trailing" id="n91-Mp-mff"/>
+                            <constraint firstAttribute="bottom" secondItem="mGY-Ed-IDC" secondAttribute="bottom" id="ndV-l0-ZPO"/>
+                            <constraint firstItem="mGY-Ed-IDC" firstAttribute="top" secondItem="Hnj-OJ-38Z" secondAttribute="top" id="vdI-ai-ToA"/>
+                            <constraint firstItem="mGY-Ed-IDC" firstAttribute="leading" secondItem="Hnj-OJ-38Z" secondAttribute="leading" id="xH5-Zs-lZ4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0j2-1T-sdn"/>
+                                <exclude reference="1X3-9T-b9k"/>
+                                <exclude reference="6dv-5h-I0S"/>
+                                <exclude reference="GZD-On-Rez"/>
+                                <exclude reference="QJ8-y0-e0C"/>
+                                <exclude reference="a9J-c1-fI7"/>
+                                <exclude reference="jli-gf-i4E"/>
+                                <exclude reference="vdI-ai-ToA"/>
+                                <exclude reference="xH5-Zs-lZ4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoJ-js-gEC" userLabel="BottomSpaceView">
+                        <rect key="frame" x="0.0" y="98" width="382" height="60"/>
+                        <color key="backgroundColor" red="0.99765560090000005" green="1" blue="0.99681869879999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="U3W-NC-mOL"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUy-qY-7Vn" userLabel="IconView">
+                        <rect key="frame" x="16" y="82" width="61" height="60"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bwr-q4-m44">
+                                <rect key="frame" x="0.0" y="0.0" width="61" height="60"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bwr-q4-m44" firstAttribute="leading" secondItem="lUy-qY-7Vn" secondAttribute="leading" id="1uw-tm-4CH"/>
+                            <constraint firstItem="bwr-q4-m44" firstAttribute="top" secondItem="lUy-qY-7Vn" secondAttribute="top" id="6wa-CT-2hZ"/>
+                            <constraint firstAttribute="trailing" secondItem="bwr-q4-m44" secondAttribute="trailing" id="e3r-pL-TKf"/>
+                            <constraint firstAttribute="bottom" secondItem="bwr-q4-m44" secondAttribute="bottom" id="eSx-yb-WQ9"/>
+                            <constraint firstAttribute="height" constant="60" id="gv8-Kd-cey"/>
+                            <constraint firstAttribute="width" secondItem="lUy-qY-7Vn" secondAttribute="height" multiplier="1:1" constant="1" id="pF2-hY-hOb"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwo-3t-9KZ" userLabel="SpaceView">
+                        <rect key="frame" x="8" y="158" width="366" height="21.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lUy-qY-7Vn" firstAttribute="bottom" secondItem="WoJ-js-gEC" secondAttribute="bottom" constant="-16" id="3R2-kK-1NM"/>
+                    <constraint firstItem="Fwo-3t-9KZ" firstAttribute="leading" secondItem="hRU-V7-Vzl" secondAttribute="leadingMargin" id="3sF-iW-adm"/>
+                    <constraint firstAttribute="bottom" secondItem="Fwo-3t-9KZ" secondAttribute="bottom" id="40T-Vq-9We"/>
+                    <constraint firstItem="Fwo-3t-9KZ" firstAttribute="top" secondItem="WoJ-js-gEC" secondAttribute="bottom" id="5my-yO-0ed"/>
+                    <constraint firstItem="lUy-qY-7Vn" firstAttribute="bottom" secondItem="WoJ-js-gEC" secondAttribute="bottom" id="6On-f7-myT"/>
+                    <constraint firstAttribute="bottom" secondItem="Hnj-OJ-38Z" secondAttribute="bottom" id="820-2C-fCa"/>
+                    <constraint firstItem="lUy-qY-7Vn" firstAttribute="leading" secondItem="hRU-V7-Vzl" secondAttribute="leadingMargin" constant="8" id="9jQ-Oc-QwU"/>
+                    <constraint firstItem="WoJ-js-gEC" firstAttribute="top" secondItem="Hnj-OJ-38Z" secondAttribute="top" id="AvK-PD-NDv"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Fwo-3t-9KZ" secondAttribute="bottom" id="HrO-wM-PTw"/>
+                    <constraint firstItem="WoJ-js-gEC" firstAttribute="top" secondItem="hRU-V7-Vzl" secondAttribute="top" id="ISS-5V-ir1"/>
+                    <constraint firstItem="WoJ-js-gEC" firstAttribute="leading" secondItem="hRU-V7-Vzl" secondAttribute="leading" id="Jwf-SD-TDt"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="WoJ-js-gEC" secondAttribute="bottom" id="LeC-1k-h4P"/>
+                    <constraint firstItem="Hnj-OJ-38Z" firstAttribute="leading" secondItem="hRU-V7-Vzl" secondAttribute="leading" id="UTr-HN-AdW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Fwo-3t-9KZ" secondAttribute="trailing" id="W1D-1Q-bJg"/>
+                    <constraint firstItem="WoJ-js-gEC" firstAttribute="top" secondItem="Hnj-OJ-38Z" secondAttribute="bottom" id="a6Y-14-XSd"/>
+                    <constraint firstItem="Fwo-3t-9KZ" firstAttribute="top" secondItem="WoJ-js-gEC" secondAttribute="top" id="i8O-Tf-TqO"/>
+                    <constraint firstItem="Hnj-OJ-38Z" firstAttribute="top" secondItem="hRU-V7-Vzl" secondAttribute="topMargin" id="jce-y4-MhI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="lUy-qY-7Vn" secondAttribute="bottom" constant="16" id="n20-v0-b59"/>
+                    <constraint firstAttribute="trailing" secondItem="WoJ-js-gEC" secondAttribute="trailing" id="r4S-Og-c03"/>
+                    <constraint firstAttribute="trailing" secondItem="Hnj-OJ-38Z" secondAttribute="trailing" id="v05-cL-AAm"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="820-2C-fCa"/>
+                        <exclude reference="6On-f7-myT"/>
+                        <exclude reference="n20-v0-b59"/>
+                        <exclude reference="AvK-PD-NDv"/>
+                        <exclude reference="ISS-5V-ir1"/>
+                        <exclude reference="LeC-1k-h4P"/>
+                        <exclude reference="HrO-wM-PTw"/>
+                        <exclude reference="i8O-Tf-TqO"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bannerImageView" destination="mGY-Ed-IDC" id="6Kg-3P-OO4"/>
+                <outlet property="iconImageView" destination="bwr-q4-m44" id="fxZ-jV-CDO"/>
+            </connections>
+            <point key="canvasLocation" x="346" y="297"/>
+        </tableViewCell>
+    </objects>
+</document>

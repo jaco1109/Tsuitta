@@ -29,10 +29,10 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func settingTest(){
-        APILocator.sharedInstance.setting.iconImage()
+        APILocator.sharedInstance.setting.account.iconImage()
         var account = Account()
         account.description = "よろしこしこ"
-        APILocator.sharedInstance.setting.profile(account)
+        APILocator.sharedInstance.setting.account.profile(account)
     }
     
     func searchTest(){
