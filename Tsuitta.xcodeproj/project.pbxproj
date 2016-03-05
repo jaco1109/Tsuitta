@@ -12,7 +12,6 @@
 		064DA76E1C82EDF900456A72 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064DA76B1C82EDF900456A72 /* SwiftyJSON.framework */; };
 		064DA76F1C82EDF900456A72 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 064DA76B1C82EDF900456A72 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0651CBB81C82F05200964912 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC721C1D587B005006D3 /* TweetTableViewCell.swift */; };
-		0651CBB91C82F0B100964912 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC701C1D5856005006D3 /* TweetTableViewCell.xib */; };
 		0651CBBA1C82F15200964912 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575594B1C12C2D30031B6CF /* TwitterCore.framework */; };
 		0651CBBB1C82F16500964912 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0652FC671C1D5133005006D3 /* PagingMenuController.framework */; };
 		0651CBBD1C82F18200964912 /* PagingMenuController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0651CBBC1C82F18200964912 /* PagingMenuController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -20,6 +19,7 @@
 		0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC6C1C1D5692005006D3 /* HomeViewController.swift */; };
 		0652FC781C1D77F2005006D3 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC771C1D77F2005006D3 /* ConstantColor.swift */; };
 		0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652FC791C1D7C65005006D3 /* UIColor+hex.swift */; };
+		06BCEB371C8AC66B00B306DC /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652FC701C1D5856005006D3 /* TweetTableViewCell.xib */; };
 		2524D5861C54D2E600703B27 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524D5851C54D2E600703B27 /* TweetDetailViewController.swift */; };
 		2524D5881C54D36200703B27 /* TweetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524D5871C54D36200703B27 /* TweetDetailView.swift */; };
 		2524D58A1C54D36D00703B27 /* TweetDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2524D5891C54D36D00703B27 /* TweetDetailView.xib */; };
@@ -250,15 +250,6 @@
 				259DD3881C004D4300C9B7CE /* Tweet */,
 			);
 			path = Table;
-			sourceTree = "<group>";
-		};
-		2524D5971C5DD48000703B27 /* Compose */ = {
-			isa = PBXGroup;
-			children = (
-				2524D5981C5DD48B00703B27 /* TweetComposeView.swift */,
-				2524D59A1C5DD4B500703B27 /* TweetComposeView.xib */,
-			);
-			path = Compose;
 			sourceTree = "<group>";
 		};
 		2524D5971C5DD48000703B27 /* Compose */ = {
@@ -739,9 +730,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				25672D2C1C82BD04002F3A69 /* ProfileConfigView.xib in Resources */,
+				06BCEB371C8AC66B00B306DC /* TweetTableViewCell.xib in Resources */,
 				2575594E1C12C2D30031B6CF /* TwitterKitResources.bundle in Resources */,
 				2524D59B1C5DD4B500703B27 /* TweetComposeView.xib in Resources */,
-				0652FC711C1D5856005006D3 /* HomeView.xib in Resources */,
 				25672D341C82D353002F3A69 /* ProfileTextConfigTableViewCell.xib in Resources */,
 				259EB83D1C6EF3F5002A3ED9 /* UserDetailInfoViewCell.xib in Resources */,
 				25FF51381C799E95009C1649 /* SearchView.xib in Resources */,

@@ -14,7 +14,6 @@ import WebImage
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tableView: UITableView!
-    let cellIdentifier: String = "Cell"
     var tweets: [TWTRTweet] = [] {
         didSet {
             tableView.reloadData()
@@ -28,7 +27,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView = UITableView(frame: self.view.bounds)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.registerNib(UINib(nibName: "TweetTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.registerNib(UINib(nibName: "TweetTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         self.view.addSubview(tableView)
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -67,7 +66,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // TODO:ツイート文章を上寄せにする
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! TweetTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TweetTableViewCell
         let tweet = tweets[indexPath.row]
         cell.configure(tweet)
         
