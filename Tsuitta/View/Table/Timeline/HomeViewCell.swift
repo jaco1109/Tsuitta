@@ -1,5 +1,5 @@
 //
-//  TweetTableViewCell.swift
+//  HomeViewCell.swift
 //  Tsuitta
 //
 //  Created by jaco on 2015/12/13.
@@ -9,7 +9,7 @@
 import UIKit
 import TwitterKit
 
-class TweetTableViewCell: UITableViewCell {
+class HomeViewCell: UITableViewCell {
     
     @IBOutlet weak var userId: UILabel!
     @IBOutlet weak var userName: UILabel!
