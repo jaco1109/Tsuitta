@@ -11,69 +11,37 @@ import UIKit
 import TwitterKit
 import WebImage
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController {
     
     var tableView: UITableView!
-    let cellIdentifier: String = "HomeViewCell"
-    var tweets: [TWTRTweet] = [] {
-        didSet {
-            tableView.reloadData()
+    var tweets: [TWTRTweet]! = []
+    
+    override func loadView() {
+        
+        super.loadView()
+        if let view = UINib(nibName: "HomeView", bundle: nil).instantiateWithOwner(self, options: nil).first as? HomeView {
+            self.view = view
         }
+        
     }
     
     // UINibを返すのとregisterNib()するのって何が違うんだろうか
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        
-        tableView = UITableView(frame: self.view.bounds)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.registerNib(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        self.view.addSubview(tableView)
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableViewAutomaticDimension
-        
-        loadTweets()
-        
-        APILocator.sharedInstance.search.users("Twitter API") {
-            users in
-            users.forEach({ (user) -> () in
-                print("-------------")
-                print(user)
-            })
-        }
-        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
-    }
-    
-    // TODO: テスト用検索キーワードを直す
-    func loadTweets() {
+     
+        // TODO: テスト用検索キーワードを直す
         APILocator.sharedInstance.search.images("d") {
             tweets in
             for tweet in tweets {
                 self.tweets.append(tweet)
             }
+            if let view = self.view as? HomeView {
+                view.setUp(tweets)
+            }
         }
-        APILocator.sharedInstance.tweet.single("678556859976933376", callback: { (tweets) -> Void in
-            self.tweets.append(tweets)
-        })
-    }
-    
-    // MARK: UITableViewDataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of Tweets.
-        return tweets.count
-    }
-    
-    // TODO:ツイート文章を上寄せにする
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! HomeViewCell
-        let tweet = tweets[indexPath.row]
-        cell.configure(tweet)
         
-        return cell
     }
     
 }
