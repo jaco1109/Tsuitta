@@ -21,6 +21,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    // UINibを返すのとregisterNib()するのって何が違うんだろうか
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -47,6 +48,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    // TODO: テスト用検索キーワードを直す
     func loadTweets() {
         APILocator.sharedInstance.search.images("d") {
             tweets in
