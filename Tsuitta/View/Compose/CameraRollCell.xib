@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RED-1K-Mxe" customClass="CameraRollCell" customModule="Tsuitta" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="91"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1rU-1N-eLP">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="91"/>
+                    </imageView>
+                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-hb-MJP">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="91"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cgw-hb-MJP" secondAttribute="trailing" id="3qh-WN-brp"/>
+                <constraint firstAttribute="trailing" secondItem="1rU-1N-eLP" secondAttribute="trailing" id="7Gu-MZ-9kf"/>
+                <constraint firstAttribute="bottom" secondItem="cgw-hb-MJP" secondAttribute="bottom" constant="5" id="DIV-mn-FWG"/>
+                <constraint firstItem="1rU-1N-eLP" firstAttribute="top" secondItem="RED-1K-Mxe" secondAttribute="top" id="P8F-Zr-cJp"/>
+                <constraint firstItem="cgw-hb-MJP" firstAttribute="top" secondItem="RED-1K-Mxe" secondAttribute="top" id="Q0I-EC-gAm"/>
+                <constraint firstItem="cgw-hb-MJP" firstAttribute="leading" secondItem="RED-1K-Mxe" secondAttribute="leading" constant="5" id="TWG-3Z-imK"/>
+                <constraint firstAttribute="bottom" secondItem="1rU-1N-eLP" secondAttribute="bottom" id="fqq-ep-jtM"/>
+                <constraint firstAttribute="trailing" secondItem="cgw-hb-MJP" secondAttribute="trailing" constant="5" id="rUf-nU-WNy"/>
+                <constraint firstItem="cgw-hb-MJP" firstAttribute="leading" secondItem="RED-1K-Mxe" secondAttribute="leading" id="tkV-Mg-IE1"/>
+                <constraint firstItem="1rU-1N-eLP" firstAttribute="leading" secondItem="RED-1K-Mxe" secondAttribute="leading" id="wp9-c5-xrN"/>
+                <constraint firstItem="cgw-hb-MJP" firstAttribute="top" secondItem="RED-1K-Mxe" secondAttribute="top" constant="5" id="xNE-QK-2fD"/>
+                <constraint firstAttribute="bottom" secondItem="cgw-hb-MJP" secondAttribute="bottom" id="zAt-q8-LYO"/>
+            </constraints>
+            <size key="customSize" width="100" height="91"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="DIV-mn-FWG"/>
+                    <exclude reference="TWG-3Z-imK"/>
+                    <exclude reference="rUf-nU-WNy"/>
+                    <exclude reference="xNE-QK-2fD"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="imageView" destination="1rU-1N-eLP" id="cCp-CT-s61"/>
+                <outlet property="selectedView" destination="cgw-hb-MJP" id="YL9-RR-3bc"/>
+            </connections>
+            <point key="canvasLocation" x="254" y="276.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

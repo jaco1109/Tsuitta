@@ -56,6 +56,11 @@
 		257559511C12C39D0031B6CF /* PagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257559501C12C39D0031B6CF /* PagingController.swift */; };
 		257559541C12E3160031B6CF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257559531C12E3160031B6CF /* LoginView.swift */; };
 		257559561C12E3250031B6CF /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257559551C12E3250031B6CF /* LoginView.xib */; };
+		2585B0241C8B1C1A009C08A6 /* CameraRollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585B0231C8B1C1A009C08A6 /* CameraRollView.swift */; };
+		2585B0261C8B1C40009C08A6 /* CameraRollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2585B0251C8B1C40009C08A6 /* CameraRollView.xib */; };
+		2585B0281C8B1C85009C08A6 /* CameraRollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2585B0271C8B1C85009C08A6 /* CameraRollCell.xib */; };
+		2585B02A1C8B1E92009C08A6 /* CameraRollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585B0291C8B1E92009C08A6 /* CameraRollCell.swift */; };
+		2585B02C1C906146009C08A6 /* CameraRollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585B02B1C906146009C08A6 /* CameraRollViewController.swift */; };
 		259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD3361C00429B00C9B7CE /* AppDelegate.swift */; };
 		259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33A1C00429B00C9B7CE /* Main.storyboard */; };
 		259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259DD33D1C00429B00C9B7CE /* Assets.xcassets */; };
@@ -167,6 +172,11 @@
 		257559501C12C39D0031B6CF /* PagingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingController.swift; sourceTree = "<group>"; };
 		257559531C12E3160031B6CF /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		257559551C12E3250031B6CF /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		2585B0231C8B1C1A009C08A6 /* CameraRollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollView.swift; sourceTree = "<group>"; };
+		2585B0251C8B1C40009C08A6 /* CameraRollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraRollView.xib; sourceTree = "<group>"; };
+		2585B0271C8B1C85009C08A6 /* CameraRollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraRollCell.xib; sourceTree = "<group>"; };
+		2585B0291C8B1E92009C08A6 /* CameraRollCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollCell.swift; sourceTree = "<group>"; };
+		2585B02B1C906146009C08A6 /* CameraRollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollViewController.swift; sourceTree = "<group>"; };
 		259DD3331C00429A00C9B7CE /* Tsuitta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tsuitta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259DD3361C00429B00C9B7CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259DD33B1C00429B00C9B7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -257,6 +267,10 @@
 			children = (
 				2524D5981C5DD48B00703B27 /* TweetComposeView.swift */,
 				2524D59A1C5DD4B500703B27 /* TweetComposeView.xib */,
+				2585B0231C8B1C1A009C08A6 /* CameraRollView.swift */,
+				2585B0251C8B1C40009C08A6 /* CameraRollView.xib */,
+				2585B0291C8B1E92009C08A6 /* CameraRollCell.swift */,
+				2585B0271C8B1C85009C08A6 /* CameraRollCell.xib */,
 			);
 			path = Compose;
 			sourceTree = "<group>";
@@ -378,6 +392,7 @@
 				259EB8301C674296002A3ED9 /* UserDetailViewController.swift */,
 				25FF51311C799D7C009C1649 /* SearchViewController.swift */,
 				25672D221C82B2A6002F3A69 /* ProfileConfigViewController.swift */,
+				2585B02B1C906146009C08A6 /* CameraRollViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -742,9 +757,11 @@
 				259DD3411C00429B00C9B7CE /* LaunchScreen.storyboard in Resources */,
 				25FF513C1C799F24009C1649 /* SearchHeaderTableViewCell.xib in Resources */,
 				25590FCF1C4258FC0024CEC3 /* sample.jpg in Resources */,
+				2585B0281C8B1C85009C08A6 /* CameraRollCell.xib in Resources */,
 				259DD33E1C00429B00C9B7CE /* Assets.xcassets in Resources */,
 				259DD33C1C00429B00C9B7CE /* Main.storyboard in Resources */,
 				25FF513A1C799EA6009C1649 /* NothingSearchResultTableViewCell.xib in Resources */,
+				2585B0261C8B1C40009C08A6 /* CameraRollView.xib in Resources */,
 				253D5E871C148E6600D59DC0 /* icon.jpg in Resources */,
 				257559561C12E3250031B6CF /* LoginView.xib in Resources */,
 				259EB8351C6EF189002A3ED9 /* UserDetailView.xib in Resources */,
@@ -796,6 +813,7 @@
 				2524D5991C5DD48B00703B27 /* TweetComposeView.swift in Sources */,
 				0652FC6D1C1D5692005006D3 /* HomeViewController.swift in Sources */,
 				0652FC7A1C1D7C65005006D3 /* UIColor+hex.swift in Sources */,
+				2585B0241C8B1C1A009C08A6 /* CameraRollView.swift in Sources */,
 				25672D301C82BE36002F3A69 /* ProfileImageConfigTableViewCell.swift in Sources */,
 				2524D5961C5DD3E500703B27 /* TweetComposeViewController.swift in Sources */,
 				259EB8311C674296002A3ED9 /* UserDetailViewController.swift in Sources */,
@@ -809,6 +827,7 @@
 				259DD3371C00429B00C9B7CE /* AppDelegate.swift in Sources */,
 				25590F991C391D660024CEC3 /* TimeLineViewController.swift in Sources */,
 				25590F9D1C40F07B0024CEC3 /* APILocator.swift in Sources */,
+				2585B02C1C906146009C08A6 /* CameraRollViewController.swift in Sources */,
 				257559541C12E3160031B6CF /* LoginView.swift in Sources */,
 				25672D381C82DF05002F3A69 /* ProfileDescriptionConfigTableViewCell.swift in Sources */,
 				259EB8391C6EF3CF002A3ED9 /* UserDetailInfoViewCell.swift in Sources */,
@@ -827,6 +846,7 @@
 				25590FCD1C424D7F0024CEC3 /* SettingAPIManager.swift in Sources */,
 				25FF513E1C799F2D009C1649 /* SearchHeaderTableViewCell.swift in Sources */,
 				2524D5881C54D36200703B27 /* TweetDetailView.swift in Sources */,
+				2585B02A1C8B1E92009C08A6 /* CameraRollCell.swift in Sources */,
 				25FF51341C799E24009C1649 /* SearchView.swift in Sources */,
 				259EB83B1C6EF3D7002A3ED9 /* UserDetailActionViewCell.swift in Sources */,
 				257559511C12C39D0031B6CF /* PagingController.swift in Sources */,
